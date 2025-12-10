@@ -842,7 +842,7 @@
 <body>
   <header>
     <nav class="nav-left">
-      <a href="<?= base_url('/') ?>">Home</a>
+      <!-- <a href="<?= base_url('/') ?>">Home</a> -->
       <a href="<?= base_url('/about') ?>">About Us</a>
     </nav>
 
