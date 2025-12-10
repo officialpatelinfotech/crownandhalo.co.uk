@@ -1,0 +1,17 @@
+# Ensure public/assets/ and public/ files are always served directly
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# Allow direct access to /assets/... by mapping to public/assets/...
+	RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+	RewriteRule ^public/assets/(.*)$ public/assets/$1 [L]
+	RewriteRule ^public/(.*)$ public/$1 [L]
+
+	# Serve existing files/directories as-is
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^ - [L]
+
+	# Route everything else to the root front controller
+	RewriteRule ^ index.php [L]
+</IfModule>
