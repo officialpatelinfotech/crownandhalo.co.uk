@@ -23,4 +23,18 @@ $routes->get('/privacy', 'PageController::privacy');
 
 // Dress Collections
 $routes->get('/dress-collections', 'CollectionsController::index');
+$routes->get('/collections', 'CollectionsController::index');
 $routes->get('/collections/(:segment)', 'CollectionsController::show/$1');
+
+// Admin / Auth routes
+$routes->get('/admin/login', 'Auth::login');
+$routes->post('/admin/login', 'Auth::login');
+$routes->get('/admin/logout', 'Auth::logout');
+
+$routes->get('/admin', 'Admin::index');
+$routes->get('/admin/dresses', 'Admin::dresses');
+$routes->get('/admin/dresses/create', 'Admin::create');
+$routes->post('/admin/dresses/store', 'Admin::store');
+$routes->get('/admin/dresses/edit/(:num)', 'Admin::edit/$1');
+$routes->post('/admin/dresses/update/(:num)', 'Admin::update/$1');
+$routes->get('/admin/dresses/delete/(:num)', 'Admin::delete/$1');

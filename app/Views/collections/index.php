@@ -1,6 +1,3 @@
-<h1 class="brand-serif" style="color:var(--heading);">Dress Collections</h1>
-<ul>
-    <?php foreach ($collections as $c): ?>
-        <li><a href="<?= base_url('collections/' . esc($c['slug'])) ?>"><?= esc($c['title']) ?></a></li>
-    <?php endforeach; ?>
-</ul>
+<?php
+// Render the full collections landing content if the standalone view exists.
+echo view('collections');
