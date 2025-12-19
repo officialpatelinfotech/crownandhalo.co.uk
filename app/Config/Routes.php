@@ -16,6 +16,7 @@ $routes->post('/contact/send', 'PageController::sendContact');
 $routes->get('/sitemap', 'PageController::sitemap');
 $routes->get('/gallery', 'PageController::gallery');
 $routes->get('/pricing', 'PageController::pricing');
+$routes->get('/how-dress-hire', 'PageController::howDressHire');
 $routes->get('/terms', 'PageController::terms');
 $routes->get('/faqs', 'PageController::faqs');
 $routes->get('/book-appointment', 'PageController::book');

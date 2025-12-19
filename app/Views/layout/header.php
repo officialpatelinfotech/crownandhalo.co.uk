@@ -67,12 +67,16 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
   <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/favicon-16x16.png') ?>?v=1.0">
   <link rel="manifest" href="<?= base_url('assets/site.webmanifest') ?>?v=1.0">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
     :root {
       --bg: #FAF7F2;
-      --text: #6F665C;
-      --heading: #5E544A;
-      --accent: #C8B6A8;
-      --accent-dark: #B39E8D;
+      --text: #877964;
+      --heading: #877964;
+      --accent: #877964;
+      --accent-dark: #877964;
       --footer-bg: #121318;
       --footer-text: #EAE6E1;
       --footer-muted: #C0BBB6;
@@ -84,14 +88,14 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     }
 
     body {
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       color: var(--text);
       background: var(--bg);
     }
 
     .brand-serif {
-      font-family: 'Georgia', 'Times New Roman', serif;
+      font-family: 'Poppins', serif;
       letter-spacing: 1px;
     }
 
@@ -106,6 +110,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       gap: 12px;
       flex-wrap: wrap;
       min-height: 56px;
+      text-transform: uppercase;
     }
 
 
@@ -157,7 +162,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     @media (min-width: 900px) {
       .logo-container .logo img {
         height: auto;
-        max-height: 60px;
+        max-height: 45px;
         max-width: 360px;
         object-fit: contain;
       }
@@ -179,7 +184,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
 
       .logo-container .logo img {
         height: auto;
-        max-height: 72px;
+        max-height: 45px;
       }
     }
 
@@ -235,7 +240,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       /* tighter spacing near logo */
       text-decoration: none;
       color: var(--heading);
-      font-weight: 500;
       font-size: 18px;
       /* unify desktop nav link size with mobile */
     }
@@ -251,6 +255,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       gap: 20px;
       flex: 1 1 0;
       margin-left: 18px;
+      margin-right: 18px;
     }
 
     /* Dropdown menu for desktop */
@@ -264,10 +269,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       text-decoration: none;
       color: var(--bs-nav-link-color);
       font-weight: 400;
-      padding: 6px 4px;
-      font-size: 18px;
-      /* match other links */
-      display: inline-block;
     }
 
     .dropdown-menu {
@@ -282,6 +283,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       padding: 8px 0;
       display: none;
       z-index: 1400;
+      overflow: hidden;
     }
 
     .dropdown-menu a {
@@ -336,7 +338,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       line-height: 1.05;
       margin: 0 0 12px;
       color: var(--heading);
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .hero-sub {
@@ -351,7 +353,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       border: 1px solid var(--accent);
       color: var(--heading);
       text-decoration: none;
-      border-radius: 8px;
       background: transparent;
     }
 
@@ -426,7 +427,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     }
 
     .top-banner .brand-name {
-      font-weight: 700;
+      font-weight: 500;
       color: white;
       font-size: 20px;
       letter-spacing: 0.5px;
@@ -466,10 +467,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
         display: block;
       }
 
-      .home-page .logo-container {
-        display: none !important;
-      }
-
       .home-page nav>.container {
         justify-content: center !important;
       }
@@ -484,6 +481,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
 
       /* When banner is present, center nav by spanning nav-left across header */
       nav.home-with-banner {
+        padding: 15px 0;
         display: grid;
         align-items: center;
         justify-content: center;
@@ -504,10 +502,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       display: grid;
       grid-template-columns: 1fr;
       align-items: center;
-    }
-
-    .home-page .logo-container {
-      display: none !important;
     }
 
     .home-page .nav-left {
@@ -566,7 +560,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
 
     .card {
       border: 1px solid rgba(0, 0, 0, 0.06);
-      border-radius: 12px;
+      border-radius: 0px;
       overflow: hidden;
       background: #fff;
     }
@@ -615,7 +609,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       width: 100%;
       padding: 12px;
       border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      /* border-radius: 8px; */
       margin-bottom: 12px;
       background: #fff;
     }
@@ -625,7 +619,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       color: #fff;
       border: none;
       padding: 12px 18px;
-      border-radius: 8px;
+      /* border-radius: 8px; */
       cursor: pointer;
     }
 
@@ -692,13 +686,13 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       flex: 1 1 280px;
       padding: 12px 14px;
       border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      /* border-radius: 8px; */
       background: #fff;
     }
 
     .newsletter button {
       padding: 12px 18px;
-      border-radius: 8px;
+      /* border-radius: 8px; */
       border: 1px solid var(--accent);
       background: var(--accent);
       color: #fff;
@@ -823,7 +817,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       width: 100%;
       height: 220px;
       border: 0;
-      border-radius: 8px;
     }
 
     @media (min-width: 900px) {
@@ -875,7 +868,6 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     }
 
     .img-frame {
-      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     }
@@ -895,6 +887,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     .feature-sub {
       color: #8A8177;
       margin: 0 0 12px;
+      letter-spacing: 0.9px;
     }
 
     .feature-bullets {
@@ -948,7 +941,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
     /* Active nav link styling */
     .nav-link.active {
       color: var(--accent-dark) !important;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     /* open -> X */
@@ -1128,17 +1121,29 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
 
       /* Make the centered logo larger on small screens and vertically center it
          within the header so it aligns correctly with the hamburger button */
+      /* Keep the logo visually centered but prevent overlap with controls.
+         Use a modest size so it fits the header comfortably on narrow viewports. */
       .logo-container {
+        position: absolute;
+        left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        pointer-events: auto;
+        z-index: 1302;
       }
 
       .logo-container .logo img {
-        height: 80px;
+        height: 45px;
+        max-height: 45px;
+        max-width: 180px;
+        object-fit: contain;
+        display: block;
       }
 
       header {
         justify-content: space-between;
+        min-height: 64px;
+        padding: 8px 12px;
       }
     }
 
@@ -1180,15 +1185,41 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
       margin: 0 10px !important;
     }
 
-    .home-page .logo-container {
-      display: none !important;
-    }
-
     /* Use a 3-column grid so nav-left sits in the center column (reliable centering) */
     .home-page nav>.container {
       display: grid !important;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
+    }
+
+    /* Mobile-specific force-hide to prevent desktop nav leaking into small screens
+       Ensure hamburger is the only visible control that opens the menu. */
+    @media (max-width: 900px) {
+
+      .nav-left,
+      .nav-right,
+      .home-page .nav-left,
+      .home-page .nav-right,
+      nav.home-with-banner .nav-left,
+      nav.home-with-banner .nav-right {
+        display: none !important;
+        visibility: hidden !important;
+      }
+
+      /* Hide any direct nav links that may be visible due to specificity wars */
+      nav .nav-left a,
+      nav .nav-right a,
+      nav>.container a.nav-link {
+        display: none !important;
+        visibility: hidden !important;
+      }
+
+      /* Ensure hamburger is visible and receives pointer events */
+      .hamburger {
+        display: inline-flex !important;
+        pointer-events: auto;
+        visibility: visible !important;
+      }
     }
 
     .home-page .nav-left {
@@ -1230,19 +1261,18 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
   ?>
   <?php if ($admin_header): ?>
     <nav class="navbar navbar-light bg-white shadow-sm" style="border-bottom:1px solid rgba(0,0,0,0.04);">
-      <div class="container d-flex align-items-center justify-content-between" style="max-width:1080px; margin:0 auto;">
+      <div class="d-flex align-items-center justify-content-between" style="max-width:1080px; margin:0 auto;">
         <a class="navbar-brand d-flex align-items-center" href="<?= base_url('/') ?>">
-          <img src="<?= base_url('assets/logo.png') ?>" alt="Crown & Halo" height="44" onerror="this.style.display='none'">
+          <img src="<?= !empty($isHome) ? base_url('assets/logo.png') : base_url('assets/logo.png') ?>" alt="Crown & Halo" height="44" onerror="this.style.display='none'">
         </a>
-        <div style="font-weight:600; color:var(--heading);"><?= esc($admin_page_title) ?></div>
+        <div style="font-weight:500; color:var(--heading);"><?= esc($admin_page_title) ?></div>
       </div>
     </nav>
   <?php else: ?>
     <?php /* top-banner removed */ ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm <?= !empty($isHome) ? 'home-with-banner' : '' ?>" role="navigation">
-      <div class="container">
+      <div class="container px-2">
         <?php
-        // Determine current URL and provide a small helper for active nav links.
         $currentUrl = function_exists('current_url') ? current_url() : (isset($_SERVER['REQUEST_URI']) ? (strpos($_SERVER['REQUEST_URI'], 'http') === 0 ? $_SERVER['REQUEST_URI'] : current_url()) : '');
         function nav_active($href, $exact = false)
         {
@@ -1258,7 +1288,8 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
         <div class="nav-left d-none d-lg-flex">
           <a class="nav-link <?= nav_active(base_url('/'), true) ?>" href="<?= base_url('/') ?>">Home</a>
           <a class="nav-link <?= nav_active(base_url('/about')) ?>" href="<?= base_url('/about') ?>">About Us</a>
-          <div class="dropdown">
+          <a class="nav-link <?= nav_active(base_url('/collections')) ?>" href="<?= base_url('/collections') ?>">Dress Collections</a>
+          <!-- <div class="dropdown">
             <a class="dropdown-toggle dropdown-toggle" href="<?= base_url('/collections') ?>" id="collectionsDropdown" role="button" aria-expanded="false">Dress Collections</a>
             <div class="dropdown-menu" aria-labelledby="collectionsDropdown">
               <a class="dropdown-item" href="<?= base_url('/collections/enchanted-twilight') ?>">The Enchanted Twilight — Evening Gowns</a>
@@ -1266,27 +1297,29 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
               <a class="dropdown-item" href="<?= base_url('/collections/happily-ever-after') ?>">Happily Ever After — Wedding Gowns</a>
               <a class="dropdown-item" href="<?= base_url('/collections/crown-halo-couture') ?>">Crown &amp; Halo Couture — Luxury Designer Wear</a>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="logo-container">
-          <a class="logo" href="<?= base_url('/') ?>">
-            <?php if (!empty($isHome)): ?>
-              <span class="logo-text brand-name">Crown &amp; Halo</span>
-            <?php else: ?>
-              <img src="<?= base_url('assets/logo.png') ?>" alt="Crown &amp; Halo" onerror="this.style.display='none'">
-              <span class="logo-text">Crown &amp; Halo</span>
-            <?php endif; ?>
-          </a>
-        </div>
+        <?php
+        if (!$isHome) {
+        ?>
+          <div class="logo-container">
+            <a class="logo" href="<?= base_url('/') ?>">
+              <img src="<?= base_url('assets/logo.png') ?>" alt="Crown &amp; Halo">
+            </a>
+          </div>
+        <?php
+        }
+        ?>
 
         <div class="nav-right d-none d-lg-flex">
+          <a class="nav-link <?= nav_active(base_url('/gallery')) ?>" href="<?= base_url('/gallery') ?>">Gallery</a>
           <a class="nav-link <?= nav_active(base_url('/contact')) ?>" href="<?= base_url('/contact') ?>">Contact Us</a>
-          <a class="nav-link" href="<?= base_url('/book-appointment') ?>">Book an Appointment</a>
+          <!-- <a class="nav-link" href="<?= base_url('/book-appointment') ?>">Book an Appointment</a> -->
         </div>
 
         <!-- Mobile hamburger only; mobile menu handled below -->
-        <button class="hamburger d-lg-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <button class="hamburger d-lg-none mr-2" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -1321,7 +1354,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
             <a class="dropdown-item" href="<?= base_url('/collections') ?>">View All Collections</a>
           </div>
         </div>
-
+        <a href="<?= base_url('/gallery') ?>">Gallery</a>
         <a href="<?= base_url('/contact') ?>">Contact Us</a>
         <a href="<?= base_url('/book-appointment') ?>">Book Appointment</a>
       </div>

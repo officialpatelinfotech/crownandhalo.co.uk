@@ -147,19 +147,19 @@
 
     <div class="hero-feature-bar" aria-hidden="false">
       <div class="hero-feature">
-        <span class="icon">✨</span>
+        <span class="icon" aria-hidden="true"></span>
         <div class="body">
           <div class="title">To make fairytale weddings possible for everyone.</div>
         </div>
       </div>
       <div class="hero-feature">
-        <span class="icon">✨</span>
+        <span class="icon" aria-hidden="true"></span>
         <div class="body">
           <div class="title">To honour love in all its seasons.</div>
         </div>
       </div>
       <div class="hero-feature">
-        <span class="icon">✨</span>
+        <span class="icon" aria-hidden="true"></span>
         <div class="body">
           <div class="title">To give every bride her moment to shine.</div>
         </div>
@@ -183,7 +183,7 @@
       <li>Priority booking for premium gowns</li>
     </ul>
 
-    <p class="small text-muted">✨ Appointments fill quickly during prom and wedding season — book early!</p>
+    <p class="small text-muted">Appointments fill quickly during prom and wedding season — book early!</p>
 
     <p><a class="cta" href="<?= base_url('/contact') ?>">Request an Appointment</a></p>
   </section>

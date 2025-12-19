@@ -1,23 +1,21 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
-
   .home-font .brand-serif {
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .home-font .hero-title {
-    font-size: 60px;
-    letter-spacing: 1px;
+    font-size: 2.5em;
+    letter-spacing: 0.9px;
+    line-height: 1.3em;
   }
 
   .home-font .hero-sub {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   .home-font .cta {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   /* Horizontal page padding to create left/right margin on small and large screens */
@@ -33,12 +31,16 @@
     }
   }
 
+  .banner-logo-top {
+    width: 325px;
+    margin-bottom: 24px;
+  }
+
   /* Vertical feature list layout (left icon, right text) */
   .hero-feature-bar {
     display: block;
     margin: 8px auto 0;
     background: #FBF6F2;
-    border-radius: 8px;
     padding: 4px;
 
     /* Compact mobile adjustments (global overrides for small screens) */
@@ -49,7 +51,7 @@
   }
 
   .hero {
-    padding: 42px 0 12px;
+    padding: 12px 0 12px;
   }
 
   .hero-title {
@@ -64,8 +66,6 @@
   }
 
   .hero-img-card {
-    margin: 12px 0 0;
-    border-radius: 6px;
     box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
   }
 
@@ -83,6 +83,10 @@
     padding: 6px;
   }
 
+  .welcome-container {
+    background: white;
+  }
+
   .feature-row {
     grid-template-columns: 1fr;
     padding: 12px;
@@ -97,11 +101,6 @@
   .feature-quote {
     font-size: 0.98rem;
     padding: 12px;
-  }
-
-  .why-panel {
-    margin: 12px -12px;
-    padding: 18px 12px;
   }
 
   .img-frame {
@@ -128,7 +127,6 @@
 
   .story-banner {
     padding: 18px 12px;
-    border-radius: 8px;
   }
 
   .story-banner h2.brand-serif {
@@ -142,7 +140,6 @@
   /* Reduce heavy decorations on mobile for performance and clarity */
   .hero-img-card,
   .feature-row,
-  .why-panel,
   .story-banner {
     box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
   }
@@ -165,7 +162,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     background: #fff;
     color: var(--accent-dark);
     font-size: 16px;
@@ -215,13 +211,12 @@
   .hero-feature-bar {
     background: #fff;
     padding: 4px;
-    border-radius: 10px;
     box-shadow: 0 8px 20px rgba(16, 24, 40, 0.035);
   }
 
   /* Hero spacing tuned to match reference layout */
   .hero {
-    padding: 110px 0 28px;
+    padding: 50px 0 50px;
     text-align: center;
     /* soft paper-like background similar to the reference */
     /* background-color: #f8f6f3; */
@@ -244,27 +239,15 @@
     text-align: center;
     margin: 0 auto 14px;
     line-height: 1.6;
-    max-width: 720px;
+    max-width: 1200px;
     color: rgba(0, 0, 0, 0.55);
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.9px;
   }
 
   .hero-features {
     margin-top: 18px;
-  }
-
-  .hero .cta {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 12px 34px;
-    border: 1px solid rgba(155, 137, 127, 0.28);
-    border-radius: 4px;
-    background: transparent;
-    color: #9b897f;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
   }
 
   .hero-img {
@@ -274,8 +257,6 @@
   .hero-img-card {
     width: 100%;
     max-width: 1180px;
-    margin: 28px auto 0;
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 32px 110px rgba(16, 24, 40, 0.14);
     background: #fff;
@@ -310,7 +291,6 @@
     transform: translate(-50%, -50%);
     width: 110px;
     height: 110px;
-    border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -319,6 +299,7 @@
     box-shadow: 0 6px 22px rgba(16, 24, 40, 0.12);
     cursor: pointer;
     z-index: 40;
+    border-radius: 50%;
   }
 
   .hero-play:before {
@@ -338,20 +319,16 @@
   }
 
   @media (max-width:900px) {
+    .hero {
+      padding: 30px 0;
+    }
+
     .hero-img-card {
       width: 100%;
-      margin: 18px 0 0;
-      border-radius: 4px;
     }
 
     .hero-img-card img {
-      height: auto;
-    }
-  }
-
-  @media (max-width:900px) {
-    .hero {
-      padding: 46px 0 12px;
+      height: 1200px;
     }
 
     .hero-title {
@@ -389,6 +366,10 @@
     pointer-events: none;
   }
 
+  #why .hero-inner {
+    padding: 50px 0px;
+  }
+
   /* Ensure the inner content sits above the overlay */
   #how-it-works .hero-inner,
   #how-it-works .how-panel {
@@ -421,7 +402,6 @@
     display: block;
     margin: 22px auto 0;
     background: rgba(255, 255, 255, 0.94);
-    border-radius: 12px;
     padding: 8px;
     max-width: 1080px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -450,7 +430,6 @@
 
   .service-card {
     background: linear-gradient(180deg, #ffffff, #fbf7f4);
-    border-radius: 12px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04);
@@ -484,7 +463,6 @@
   .testimonial {
     background: #fff;
     padding: 18px;
-    border-radius: 10px;
     box-shadow: 0 8px 20px rgba(16, 24, 40, 0.04);
   }
 
@@ -498,7 +476,6 @@
     max-width: 980px;
     margin: 36px auto;
     padding: 20px;
-    border-radius: 12px;
     background: linear-gradient(180deg, #fff, #fbfbfb);
     box-shadow: 0 12px 30px rgba(16, 24, 40, 0.04);
     text-align: center;
@@ -516,7 +493,6 @@
   .newsletter input[type="email"] {
     padding: 12px 14px;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
     width: 340px;
     max-width: 60%;
     box-sizing: border-box;
@@ -524,7 +500,6 @@
 
   .newsletter button {
     padding: 12px 18px;
-    border-radius: 6px;
     background: var(--accent, #b97a6d);
     color: #fff;
     border: none;
@@ -592,40 +567,6 @@
     }
   }
 
-  /* Why section panel: background, padding and side margins — align with hero-inner */
-  .why-panel {
-    /* default behavior (overridden for #why below) */
-    margin: 22px -24px;
-    padding: 28px 24px;
-    width: auto;
-    max-width: none;
-  }
-
-  @media (min-width:861px) {
-    .why-panel {
-      padding: 32px 24px;
-    }
-  }
-
-  /* Adjust negative margins on narrow screens where hero-inner padding is smaller */
-  @media (max-width:860px) {
-    .why-panel {
-      margin: 18px -12px;
-      padding: 22px 12px;
-    }
-  }
-
-  /* Centered, constrained layout specifically for the #why section */
-  #why .why-panel {
-    margin: 0 auto;
-    max-width: 1080px;
-    padding: 32px 22px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    background: linear-gradient(180deg, #fff, #fbfbf7);
-    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.04);
-  }
-
   /* Two-column split inside #why with the image constrained on the right */
   #why .why-panel .split {
     display: grid;
@@ -640,7 +581,6 @@
     justify-content: center;
     max-height: 380px;
     overflow: hidden;
-    border-radius: 8px;
   }
 
   #why .why-panel .img-frame img {
@@ -648,14 +588,13 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 10%;
-    border-radius: 8px;
     box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
     display: block;
   }
 
   @media (max-width:860px) {
     #why .why-panel {
-      padding: 20px 14px;
+      padding: 40px 14px;
     }
 
     #why .why-panel .split {
@@ -684,15 +623,21 @@
      but stacks on smaller screens. */
   #why-hire .split {
     display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 22px;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
+  }
+
+  #why-hire .split-reverse {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
     align-items: start;
   }
 
   #why-hire .img-frame {
     max-height: 380px;
     overflow: hidden;
-    border-radius: 8px;
   }
 
   #why-hire .img-frame img {
@@ -737,7 +682,15 @@
     #why-hire .split {
       grid-template-columns: 1fr;
       gap: 14px;
+      grid-auto-flow: dense;
     }
+
+    #why-hire .split-reverse {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      grid-auto-flow: dense;
+    }
+
 
     #why-hire .img-frame {
       max-height: 220px;
@@ -780,7 +733,6 @@
     -webkit-backdrop-filter: blur(16px);
     /* Safari */
 
-    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.35);
 
     box-shadow:
@@ -795,14 +747,10 @@
   .how-panel {
     margin: 50px 0;
     padding: 28px 20px;
-    border-radius: 14px;
     box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
     border-left: 6px solid rgba(185, 122, 109, 0.06);
     color: rgba(0, 0, 0, 0.9);
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
     align-items: center;
   }
 
@@ -828,7 +776,6 @@
       width: 56px;
       height: 4px;
       background: rgba(185, 122, 109, 0.08);
-      border-radius: 2px;
       margin-top: 10px;
     }
 
@@ -854,13 +801,11 @@
     margin-top: 26px;
     padding: 20px;
     background: linear-gradient(180deg, #ffffff, #fbfbf7);
-    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(16, 24, 40, 0.05);
   }
 
   .feature-row .feature-image {
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 8px 22px rgba(16, 24, 40, 0.06);
   }
 
@@ -889,23 +834,22 @@
     }
   }
 
-  /* Emphatic callout for feature copy */
+  /* Emphatic callout for feature copy — light panel with left accent */
   .feature-quote {
     margin-top: 12px;
-    padding: 16px 20px;
+    padding: 12px 18px;
     background: linear-gradient(180deg, #fff, #fbfbfb);
-    border-left: 4px solid rgba(185, 122, 109, 0.12);
-    border-radius: 8px;
+    border-left: 3px solid rgba(217, 184, 154, 0.12);
     color: #6b6058;
-    font-style: italic;
+    font-style: normal;
     line-height: 1.5;
-    max-width: 780px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .feature-quote strong {
-    font-style: normal;
     font-weight: 600;
-    color: var(--heading);
+    color: #6b6058;
   }
 
   @media (max-width:860px) {
@@ -959,9 +903,8 @@
   /* Story banner (closing statement) — dark, elegant theme with warm accent */
   .story-banner {
     margin-top: 18px;
-    background: linear-gradient(180deg, #2b2018 0%, #1d1612 100%);
+    /* background: linear-gradient(180deg, #2b2018 0%, #1d1612 100%); */
     color: #f6e9df;
-    border-radius: 12px;
     padding: 36px 22px;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
     text-align: center;
@@ -973,7 +916,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 10% 20%, rgba(255, 232, 200, 0.03), transparent 8%), radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02), transparent 12%);
+    background: var(--heading);
     pointer-events: none;
     z-index: 0;
   }
@@ -988,7 +931,7 @@
   .story-banner h2.brand-serif {
     margin: 0 0 8px 0;
     font-size: clamp(1rem, 2.4vw, 1.35rem);
-    color: #f3e6d9;
+    color: white;
     letter-spacing: 0.6px;
     font-weight: 600;
   }
@@ -998,14 +941,13 @@
     display: block;
     width: 64px;
     height: 3px;
-    background: rgba(242, 200, 150, 0.14);
-    border-radius: 2px;
+    background: white;
     margin: 10px auto 0;
   }
 
   .story-banner .story-line {
     margin: 0;
-    color: rgba(243, 230, 219, 0.95);
+    color: white;
     font-size: 1.05rem;
     line-height: 1.6;
     opacity: 0.95;
@@ -1040,7 +982,6 @@
     gap: 12px;
     padding: 10px 16px;
     background: linear-gradient(180deg, #fff, #fbfbfb);
-    border-radius: 999px;
     box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
     color: var(--heading);
     font-weight: 600;
@@ -1053,10 +994,37 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
     background: rgba(185, 122, 109, 0.08);
     color: rgba(185, 122, 109, 0.9);
     font-size: 18px;
+  }
+
+  /* Compact centered join banner styled like the provided screenshot */
+  .join-banner {
+    background: linear-gradient(180deg, #fff, #fbfbfb);
+    padding: 14px 18px;
+    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+    border-left: 4px solid rgba(185, 122, 109, 0.12);
+    max-width: 980px;
+    margin: 12px auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .join-banner::before {
+    /* disable the decorative pseudo used by .story-banner when present */
+    background-image: none !important;
+  }
+
+  .join-banner .story-inner {
+    padding: 0;
+  }
+
+  .join-banner .story-line {
+    margin: 0;
+    color: #6b6058;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   @media (max-width:860px) {
@@ -1078,45 +1046,67 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 760px;
     min-height: 420px;
     padding: 0;
-    margin-bottom: 28px;
     color: #fff;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .page-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--banner-bg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transform: scale(1.04);
+    z-index: 0;
+    will-change: filter;
   }
 
   .page-banner .banner-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.36));
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
   }
 
   .page-banner .banner-inner {
     position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
+    z-index: 2;
+    top: 180px;
+    text-align: left;
+    left: 0;
+    max-width: 530px;
+    margin-left: 48px;
+  }
+
+  /* Center content inside the left-aligned banner column */
+  .page-banner .banner-inner .hero-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-banner .banner-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
   }
 
   .page-banner h2 {
     margin: 0 0 8px;
     font-size: clamp(20px, 3.5vw, 34px);
     color: #fff;
-    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
   }
 
   .page-banner .banner-sub {
     margin: 0 0 14px;
     color: rgba(255, 255, 255, 0.96);
     font-size: 1rem;
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   }
 
   /* High-contrast CTA inside banner */
@@ -1124,29 +1114,66 @@
     background: #ffffff;
     color: var(--heading);
     border-color: transparent;
-    padding: 12px 22px;
-    border-radius: 8px;
+    padding: 15px 34px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-    font-weight: 700;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .brown-cta {
+    display: inline-block;
+    color: #ffffff;
+    background-color: var(--heading);
+    border-color: transparent;
+    padding: 15px 34px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 18px;
   }
 
   .page-banner .cta:hover {
+    transform: scale(0.98);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    background-color: var(--heading);
+    color: white;
+    border: 1px solid white;
+  }
+
+  .brown-cta:hover {
     transform: scale(0.98);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
   }
 
   /* Ensure banner-specific hero title overrides global muted color */
   .page-banner .hero-title {
-    color: #ffffff !important;
+    color: #facc5c !important;
+    text-align: center;
   }
 
   @media (max-width:860px) {
     .page-banner {
-      height: auto;
-      padding: 44px 0;
+      height: 900px;
       min-height: 260px;
-      margin-bottom: 16px;
+      padding: 44px 0;
       display: block;
+    }
+
+    /* Re-center the banner content on smaller screens */
+    .page-banner .banner-inner {
+      text-align: center;
+      margin-left: 0;
+      top: 350px;
+      padding: 0 16px;
+    }
+
+    .banner-logo-top {
+      width: 250px;
+    }
+
+    .home-font .hero-title {
+      font-size: 2em;
     }
 
     .page-banner h2 {
@@ -1160,7 +1187,6 @@
   input[type="submit"],
   .newsletter button,
   .join-badge {
-    border-radius: 0 !important;
     transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
     transform-origin: center center;
     -webkit-tap-highlight-color: transparent;
@@ -1181,63 +1207,129 @@
     opacity: 0.98;
   }
 
-  /* Remove rounding on small-screen adjustments too */
-  @media (max-width:860px) {
-    .cta,
-    button,
-    input[type="submit"],
-    .newsletter button,
-    .join-badge {
-      border-radius: 0 !important;
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 1180px;
+    margin: 36px auto 0;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .feature-card {
+    position: relative;
+    overflow: visible;
+  }
+
+  .feature-card .image {
+    width: 100%;
+    height: 520px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .feature-card .info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    background: #fff;
+    padding: 18px 26px;
+    width: calc(100% - 80px);
+    max-width: 420px;
+    text-align: center;
+  }
+
+  .feature-card .info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--heading);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .feature-card .info .feature-sub {
+    margin: 0;
+    color: #8A8177;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 980px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      margin: 20px auto;
+    }
+
+    .feature-card .image {
+      height: 360px;
+    }
+
+    .feature-card .info {
+      position: relative;
+      left: auto;
+      transform: none;
+      bottom: auto;
+      width: auto;
+      max-width: none;
+      margin: -60px 18px 0 18px;
+      text-align: center;
     }
   }
 </style>
 <div class="home-font">
-  <div class="page-banner" role="region" aria-label="Homepage banner" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');">
-    <div class="banner-overlay" aria-hidden="true"></div>
+  <div class="page-banner" role="region" aria-label="Homepage banner" style="--banner-bg: url('<?= base_url('assets/3.png') ?>');">
     <div class="banner-inner">
       <div class="hero-top">
-        <h1 class="hero-title brand-serif">Luxury Dress Hire in Peterborough <br> Wear Your Story</h1>
-        <p class="hero-sub">Welcome to <b>Crown &amp; Halo Dress Hire</b>, Peterborough’s leading destination for <b>luxury dress hire</b> and <b>special occasion gowns</b>. Whether you’re searching for an elegant evening gown, a show-stopping prom dress, or a timeless bridal look, our curated collection allows you to <b>look extraordinary without the designer price tag</b>.</p>
-        <p class="hero-sub">Discover a handpicked range of <b>evening dresses, prom gowns, bridal wear, black-tie dresses, and couture pieces</b> available to hire from just £150.</p>
+        <img src="<?= base_url('assets/logo-2x2.png') ?>" alt="Crown & Halo logo" class="banner-logo-top">
+        <h1 class="hero-title brand-serif">Luxury Dress Hire in <br>Peterborough</h1>
       </div>
-      <div style="margin-top:18px;">
+      <div class="banner-cta" style="margin-top:18px;">
         <a class="cta" href="<?= base_url('/book-appointment') ?>">Book Now</a>
       </div>
     </div>
+    <!-- Top-left compact logo for banner -->
   </div>
+
+  <div class="welcome-container py-5">
+    <p class="hero-sub">Welcome to <b>Crown &amp; Halo Dress Hire</b>, Peterborough’s leading destination for <b>luxury dress hire</b> and <b>special occasion gowns</b>. Whether you’re searching for an elegant evening gown, a show-stopping prom dress, or a timeless bridal look, our curated collection allows you to <b>look extraordinary without the designer price tag</b>.</p>
+    <p class="hero-sub">Discover a handpicked range of <b>evening dresses, prom gowns, bridal wear, black-tie dresses, and couture pieces</b> available to hire from just £150.</p>
+
+    <div style="grid-column:1 / -1;">
+      <div class="features-grid" aria-hidden="false">
+        <div class="feature-card">
+          <div class="image" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3>Premium Quality</h3>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3>Affordable luxury</h3>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3>Sustainable Fashion</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-media" aria-hidden="true">
         <div class="hero-img-card">
           <img src="<?= base_url('assets/luxury gown.jpg'); ?>" alt="Cover" loading="eager">
           <a href="#" class="hero-play" aria-label="Play video" onclick="return false;"></a>
-        </div>
-      </div>
-
-      <div style="grid-column:1 / -1;">
-        <div class="hero-feature-bar" aria-hidden="false">
-          <div class="hero-feature">
-            <span class="icon">✨</span>
-            <div class="body">
-              <div class="title">Premium Quality</div>
-              <div class="desc">Curated designer-inspired gowns, inspected and prepared to the highest standard.</div>
-            </div>
-          </div>
-          <div class="hero-feature">
-            <span class="icon">💎</span>
-            <div class="body">
-              <div class="title">Affordable Luxury</div>
-              <div class="desc">Wear couture-level styling for a fraction of the purchase price.</div>
-            </div>
-          </div>
-          <div class="hero-feature">
-            <span class="icon">🌿</span>
-            <div class="body">
-              <div class="title">Sustainable Fashion</div>
-              <div class="desc">Choose a beautiful, circular alternative to buying new — style with conscience.</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1275,8 +1367,8 @@
             <li>Easy booking and returns</li>
             <li>Cleaning included with every hire</li>
           </ul>
-          <p class="hero-sub" style="margin-top:10px;">Find your perfect gown, <b>wear your story</b>, and shine at your next event.</p>
-          <p><a class="cta" href="<?= base_url('/book-appointment') ?>">Book Now</a></p>
+          <p class="hero-sub" style="margin-top:10px;"><em>Find your perfect gown, <b>wear your story</b>, and shine at your next event.</em></p>
+          <p><a class="brown-cta" href="<?= base_url('/book-appointment') ?>">Book Now</a></p>
         </div>
 
         <div class="img-frame" aria-hidden="true">
@@ -1333,12 +1425,418 @@
   })();
 </script>
 
-<section id="how-it-works" class="parallax" style="background-image: url('<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>');">
+<section id="collections-showcase" class="collections-showcase" aria-labelledby="collections-heading">
+  <style>
+    .collections-showcase {
+      padding: 100px 50px;
+      box-sizing: border-box;
+      background-color: #877964;
+    }
+
+    .collections-inner {
+      position: relative;
+    }
+
+    .showcase-display {
+      width: 100%;
+      /* increased height to give more vertical room for imagery */
+      height: 1100px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 18px 46px rgba(16, 24, 40, 0.12);
+      transition: transform 260ms ease;
+      z-index: 1;
+    }
+
+    .showcase-base,
+    .showcase-overlay {
+      position: absolute;
+      inset: 0;
+      /* Ensure the image always covers the container */
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      /* bias the background slightly upward so faces sit under the top tint */
+      background-position: center 18% !important;
+      background-repeat: no-repeat !important;
+      will-change: opacity, background-image;
+      /* fallback background color while image loads */
+      background-color: #000;
+    }
+
+    .showcase-base {
+      z-index: 0;
+    }
+
+    .showcase-overlay {
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 360ms ease, transform 360ms ease;
+      /* scale from the top so zoom keeps the face within the visible top area */
+      transform-origin: center top;
+      pointer-events: none;
+    }
+
+    .showcase-cols {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      z-index: 2;
+      align-items: flex-start;
+      pointer-events: auto;
+    }
+
+    .showcase-col {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+      padding: 28px 14px 18px;
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.95);
+      text-decoration: none;
+      -webkit-text-decoration: none;
+      -moz-text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      border-left: 1px solid rgba(234, 227, 227, 0.74);
+      transition: color 180ms ease, background-color 160ms ease, transform 180ms ease;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+
+    .showcase-col:link,
+    .showcase-col:visited,
+    .showcase-col:hover,
+    .showcase-col:active {
+      text-decoration: none;
+    }
+
+    .showcase-col:first-child {
+      border-left: none;
+    }
+
+    .showcase-col:hover,
+    .showcase-col.active {
+      color: var(--heading);
+      /* top 15% tint only so the heading sits on a contrasting strip */
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 10%, transparent 10%);
+      background-repeat: no-repeat;
+      box-shadow: 0 8px 28px rgba(16, 24, 40, 0.08);
+      /* soften the left divider when active */
+      border-left-color: rgba(234, 227, 227, 0.04);
+    }
+
+    @media (max-width:980px) {
+      .collections-showcase {
+        padding: 50px 25px;
+      }
+
+      .showcase-display {
+        /* taller mobile height to accommodate 2x2 layout */
+        height: 800px;
+      }
+
+      /* Present as a 2x2 overlay grid on narrow viewports (two columns x two rows) */
+      .showcase-cols {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0;
+        z-index: 2;
+        align-items: stretch;
+        pointer-events: auto;
+      }
+
+      .showcase-col {
+        height: 100%;
+        padding: 14px 12px 10px;
+        color: rgba(255, 255, 255, 0.95);
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 1.05rem;
+        box-sizing: border-box;
+      }
+
+      /* Remove left border for the left-hand column in each row */
+      .showcase-col:first-child,
+      .showcase-col:nth-child(3) {
+        border-left: none;
+      }
+
+      /* Add a subtle top divider between the two rows */
+      .showcase-col:nth-child(n+3) {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      /* On small screens keep a subtle top tint while keeping text legible */
+      .showcase-col:hover,
+      .showcase-col.active {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.92) 20%, transparent 20%);
+        background-repeat: no-repeat;
+        color: var(--heading);
+        transform: translateY(-2px);
+      }
+    }
+  </style>
+
+  <div class="collections-inner">
+    <div id="showcaseDisplay" class="showcase-display" role="img" aria-label="Collections showcase image">
+      <div id="showcaseBase" class="showcase-base" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');" aria-hidden="true"></div>
+      <div id="showcaseOverlay" class="showcase-overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="showcase-cols" role="tablist" aria-label="Collections">
+      <a role="tab" class="showcase-col" href="<?= base_url('/collections/happily-ever-after') ?>" data-image="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" data-scale="1.08">Wedding Gowns</a>
+      <a role="tab" class="showcase-col" href="<?= base_url('/collections/enchanted-twilight') ?>" data-image="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" data-scale="1.06">Evening Gowns</a>
+      <a role="tab" class="showcase-col" href="<?= base_url('/collections/princess-prom-dreams') ?>" data-image="<?= base_url('assets/evening gown.jpg') ?>" data-scale="1.03">Prom Dresses</a>
+      <a role="tab" class="showcase-col" href="<?= base_url('/collections/crown-halo-couture') ?>" data-image="<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>" data-scale="1.04">Luxury Designer Wear</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var display = document.getElementById('showcaseDisplay');
+      if (!display) return;
+
+      var cols = document.querySelectorAll('.showcase-col');
+      var base = document.getElementById('showcaseBase');
+      var overlay = document.getElementById('showcaseOverlay');
+      var defaultBg = base.style.backgroundImage || '';
+
+      function showOverlay(url, scale) {
+        if (!url || !overlay) return;
+        overlay.style.backgroundImage = "url('" + url + "')";
+        overlay.style.transform = 'scale(' + (scale || 1.03) + ')';
+        // force reflow to ensure transition
+        void overlay.offsetWidth;
+        overlay.style.opacity = '1';
+      }
+
+      function hideOverlay() {
+        if (!overlay) return;
+        // reset transform back to base scale for smooth return
+        overlay.style.transform = 'scale(1)';
+        overlay.style.opacity = '0';
+      }
+
+      cols.forEach(function(col) {
+        var img = col.getAttribute('data-image');
+
+        col.addEventListener('mouseenter', function(e) {
+          var scale = col.getAttribute('data-scale') || '1.03';
+          showOverlay(img, scale);
+          cols.forEach(function(c) {
+            c.classList.remove('active');
+          });
+          col.classList.add('active');
+        });
+
+        col.addEventListener('focus', function() {
+          var scale = col.getAttribute('data-scale') || '1.03';
+          showOverlay(img, scale);
+          col.classList.add('active');
+        });
+        col.addEventListener('blur', function() {
+          col.classList.remove('active');
+          // keep last image when focus is lost
+        });
+
+        col.addEventListener('mouseleave', function(e) {
+          // Remove visual active state but keep the overlay showing
+          // the last hovered image (persist behavior requested).
+          col.classList.remove('active');
+        });
+
+        // Touch / tap support: toggle image on first tap, follow link on second
+        var tapped = false;
+        col.addEventListener('touchstart', function(ev) {
+          if (!tapped) {
+            ev.preventDefault();
+            cols.forEach(function(c) {
+              c.classList.remove('active');
+            });
+            col.classList.add('active');
+            showOverlay(img);
+            tapped = true;
+            setTimeout(function() {
+              tapped = false;
+            }, 800);
+          }
+        }, {
+          passive: false
+        });
+      });
+
+      // Preserve last-hovered image — do not auto-hide the overlay
+      // (no container-level mouseleave handler so the overlay remains visible)
+      // Remove overlay background when fully faded out to reduce GPU memory
+      if (overlay) {
+        overlay.addEventListener('transitionend', function(e) {
+          if (e.propertyName === 'opacity' && getComputedStyle(overlay).opacity === '0') {
+            overlay.style.backgroundImage = '';
+          }
+        });
+      }
+    })();
+  </script>
+</section>
+
+<section id="how-it-works" class="parallax" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');">
   <div class="hero-inner">
-    <div class="how-panel">
+    <div class="how-panel mx-3 mx-md-0">
       <h2 class="brand-serif" style="color:var(--heading);">Choose the Smarter, More Sustainable Way to Shine</h2>
-      <p class="hero-sub">Today’s modern bride is <b>style-savvy, environmentally conscious, and financially smart</b>. At Crown & Halo Dress Hire, we offer a luxury alternative to buying a dress you may only wear once.</p>
-      <p class="hero-sub">By choosing to <b>hire instead of purchase</b>, you’re joining a growing movement of women who want to look incredible without contributing to waste or overspending.</p>
+      <p class="hero-sub mt-4">Today’s modern bride is <b>style-savvy, environmentally conscious, and financially smart</b>. At Crown & Halo Dress Hire, we offer a luxury alternative to buying a dress you may only wear once.</p>
+      <p class="hero-sub mt-4">By choosing to <b>hire instead of purchase</b>, you’re joining a growing movement of women who want to look incredible without contributing to waste or overspending.</p>
+      <p style="margin-top:14px; text-align:center;"><a class="brown-cta" href="<?= base_url('/products') ?>">Browse Dresses</a></p>
+
+    </div>
+  </div>
+</section>
+
+<section class="our-project">
+  <div class="hero-inner">
+    <h2 class="" style="text-align:center; color:var(--heading); text-transform: uppercase;">Dress Collections</h2>
+    <p style="text-align:center; color:rgba(0,0,0,0.45); max-width:820px; margin:8px auto 30px;"><em>Find your perfect gown, <b>wear your story</b>, and shine at your next event.</em></p>
+
+    <style>
+      /* Our Project specific layout: three vertical columns with controlled image heights */
+      .our-project {
+        background-color: var(--heading-light);
+        padding: 50px 0;
+      }
+
+      .our-project .project-cols {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 18px;
+        box-sizing: border-box;
+      }
+
+      .our-project .col {
+        display: grid;
+        grid-auto-rows: auto;
+        gap: 24px;
+      }
+
+      .our-project .feature-card .image {
+        height: 220px;
+        background-position: center center;
+        transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease;
+        will-change: transform;
+        transform-origin: center center;
+      }
+
+      .our-project .feature-card.small .image {
+        height: 220px;
+      }
+
+      .our-project .feature-card.medium .image {
+        height: 360px;
+      }
+
+      .our-project .feature-card.tall .image {
+        height: 520px;
+      }
+
+      /* Hover/tap: subtly scale images down to create a gentle press effect */
+      .our-project .feature-card:hover .image,
+      .our-project .feature-card:focus-within .image {
+        transform: scale(0.9);
+      }
+
+      .our-project .feature-card:active .image {
+        transform: scale(0.9);
+      }
+
+      /* Place captions directly below images for the our-project section */
+      .our-project .feature-card .info {
+        position: relative !important;
+        left: auto !important;
+        transform: none !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 18px 0 0 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        text-align: center;
+      }
+
+      .our-project .feature-card .info h3 {
+        margin: 0 0 6px;
+      }
+
+      @media (max-width: 980px) {
+        .our-project .project-cols {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .our-project .feature-card .image {
+          height: 360px;
+        }
+      }
+    </style>
+
+    <div class="project-cols" aria-hidden="false">
+      <div class="col col-left">
+        <div class="feature-card tall">
+          <div class="image" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
+          </div>
+        </div>
+
+        <div class="feature-card medium">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Luxury Designer Wear</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-center">
+        <div class="feature-card small">
+          <div class="image" style="background-image: url('<?= base_url('assets/3.png') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
+          </div>
+        </div>
+
+        <div class="feature-card medium">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-right">
+        <div class="feature-card tall">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Luxury Designer Wear</h3>
+            <p class="feature-sub"></p>
+          </div>
+        </div>
+
+        <div class="feature-card small">
+          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+          <div class="info">
+            <h3 class="brand-serif" style="text-transform: uppercase;">Evening Dresses</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1365,23 +1863,17 @@
     </div>
 
     <div class="section-divider" aria-hidden="true">
-      <svg class="divider-svg divider-scallop" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
-        <!-- Scalloped motif made from soft circles -->
-        <g transform="translate(0,0)">
-          <circle cx="100" cy="46" r="16" />
-          <circle cx="300" cy="46" r="16" />
-          <circle cx="500" cy="46" r="16" />
-          <circle cx="700" cy="46" r="16" />
-          <circle cx="900" cy="46" r="16" />
-          <circle cx="1100" cy="46" r="16" />
+      <svg class="divider-svg divider-dash" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
+        <!-- Decorative dashed line with small diamonds -->
+        <path d="M20 40 L1180 40" stroke="rgba(217,184,154,0.9)" stroke-width="2" fill="none" />
+        <g fill="rgba(217,184,154,0.95)">
+          <polygon points="600,32 610,40 600,48 590,40" opacity="0.95" />
         </g>
-        <path d="M0 46 H1200" stroke="rgba(217,184,154,0.22)" stroke-width="1.2" fill="none" />
       </svg>
     </div>
-
-    <div class="split" style="margin-top:26px;">
+    <div class="split-reverse" style="margin-top:26px;">
       <div class="img-frame">
-        <img class="lazy" data-src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Confident without commitment" decoding="async" fetchpriority="low">
+        <img class="lazy" data-src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Confident without commitment" decoding="async" fetchpriority="low">
       </div>
       <div>
         <h3 class="brand-serif" style="color:var(--heading);">Luxury Bridal Fashion Without the Luxury Price Tag</h3>
@@ -1394,28 +1886,22 @@
           <li>Save money for the things that matter most — honeymoon, home, family</li>
           <li>Enjoy a champagne lifestyle on a realistic wedding budget</li>
         </ul>
-        <blockquote class="feature-quote" aria-label="Feature quote">
-          <p><em><strong>Look exquisite, feel incredible, and invest your savings into unforgettable memories</strong>.</em></p>
+        <blockquote aria-label="Feature quote">
+          <p class="join-banner" style="font-style: italic;"><strong>Look exquisite, feel incredible, and invest your savings into unforgettable memories</strong></p>
         </blockquote>
-        <p style="margin-top:14px;"><a class="cta" href="<?= base_url('/products') ?>">Browse Dresses</a></p>
+        <p style="margin-top:14px;"><a class="brown-cta" href="<?= base_url('/products') ?>">Browse Dresses</a></p>
       </div>
     </div>
 
     <div class="section-divider" aria-hidden="true">
-      <svg class="divider-svg divider-scallop" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
-        <!-- Scalloped motif made from soft circles -->
-        <g transform="translate(0,0)">
-          <circle cx="100" cy="46" r="16" />
-          <circle cx="300" cy="46" r="16" />
-          <circle cx="500" cy="46" r="16" />
-          <circle cx="700" cy="46" r="16" />
-          <circle cx="900" cy="46" r="16" />
-          <circle cx="1100" cy="46" r="16" />
+      <svg class="divider-svg divider-dash" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
+        <!-- Decorative dashed line with small diamonds -->
+        <path d="M20 40 L1180 40" stroke="rgba(217,184,154,0.9)" stroke-width="2" fill="none" />
+        <g fill="rgba(217,184,154,0.95)">
+          <polygon points="600,32 610,40 600,48 590,40" opacity="0.95" />
         </g>
-        <path d="M0 46 H1200" stroke="rgba(217,184,154,0.22)" stroke-width="1.2" fill="none" />
       </svg>
     </div>
-
     <div class="split">
       <div>
         <h3 class="brand-serif" style="margin:10px 0; color:var(--heading);">Feel Confident Without Commitment</h3>
@@ -1436,22 +1922,16 @@
     </div>
 
     <div class="section-divider" aria-hidden="true">
-      <svg class="divider-svg divider-scallop" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
-        <!-- Scalloped motif made from soft circles -->
-        <g transform="translate(0,0)">
-          <circle cx="100" cy="46" r="16" />
-          <circle cx="300" cy="46" r="16" />
-          <circle cx="500" cy="46" r="16" />
-          <circle cx="700" cy="46" r="16" />
-          <circle cx="900" cy="46" r="16" />
-          <circle cx="1100" cy="46" r="16" />
+      <svg class="divider-svg divider-dash" viewBox="0 0 1200 64" preserveAspectRatio="none" role="img" aria-hidden="true">
+        <!-- Decorative dashed line with small diamonds -->
+        <path d="M20 40 L1180 40" stroke="rgba(217,184,154,0.9)" stroke-width="2" fill="none" />
+        <g fill="rgba(217,184,154,0.95)">
+          <polygon points="600,32 610,40 600,48 590,40" opacity="0.95" />
         </g>
-        <path d="M0 46 H1200" stroke="rgba(217,184,154,0.22)" stroke-width="1.2" fill="none" />
       </svg>
     </div>
 
-
-    <div class="split" style="margin-top:26px;">
+    <div class="split-reverse" style="margin-top:26px;">
       <div class="img-frame">
         <img class="lazy" data-src="<?= base_url('assets/happy-bride-smile-talking-with-her-friend-smartphone-looking-her-nails.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Confident without commitment" decoding="async" fetchpriority="low">
       </div>
@@ -1469,14 +1949,13 @@
         </ul>
         <p class="feature-sub">This is bridal fashion for the women who care.</p>
         <p class="feature-sub">Those who love deeply, choose responsibly, and walk into marriage with clarity and confidence. <b>Easy. Elegant. Responsible.</b></p>
-        <div style="margin-top:12px;">
-          <div class="join-badge" role="status" aria-label="Join other brides">
-            <span class="badge-icon" aria-hidden="true">💍</span>
-            <span>Join hundreds of brides choosing a better way to say <strong>“I Do.”</strong></span>
+        <section class="join-banner" aria-label="Join other brides" style="margin-top:12px;">
+          <div class="story-inner">
+            <p class="story-line" style="margin:0; font-style: italic;">Join hundreds of brides choosing a better way to say <strong>“I Do.”</strong></p>
           </div>
-        </div>
+        </section>
         <p class="feature-sub">If you're a bride who values style, sustainability, and smart choices, then Crown & Halo Dress Hire is here to help you create a bridal look that feels just as beautiful as it looks.</b></p>
-        <p><a class="cta" href="<?= base_url('/book-appointment') ?>">Book Now</a></p>
+        <p><a class="brown-cta" href="<?= base_url('/book-appointment') ?>">Book Now</a></p>
       </div>
     </div>
 

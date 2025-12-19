@@ -88,6 +88,14 @@ class PageController extends BaseController
             . view('layout/footer');
     }
 
+    public function howDressHire()
+    {
+        helper(['url']);
+        return view('layout/header')
+            . view('how-dress-hire')
+            . view('layout/footer');
+    }
+
     public function terms()
     {
         helper(['url']);
