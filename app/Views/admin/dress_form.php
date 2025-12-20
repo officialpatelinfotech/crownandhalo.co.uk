@@ -1,12 +1,20 @@
+<style>
+  .container {
+		width: 1200px !important;
+		max-width: 1200px !important;
+		margin: 0 auto;
+	}
+</style>
+
 <?php $isEdit = ! empty($dress); ?>
-<div class="container-fluid mt-3">
+<div class="container mt-3">
   <div class="row">
     <div class="col-md-2">
       <?= view('admin/_sidebar') ?>
     </div>
     <div class="col-md-10">
       <div class="mb-2">
-        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="safeBack('<?= base_url('/admin/dresses') ?>');">&larr;&nbsp;Back</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="safeBack('<?= base_url('/admin/dresses') ?>');">Back</button>
       </div>
       <div class="card" style="max-width:900px;">
         <div class="card-body">
@@ -64,7 +72,7 @@
               <div id="currentImage" style="margin-top:12px; display:<?= empty($existingImages) ? 'none' : 'flex' ?>; gap:8px; flex-wrap:wrap; justify-content:center;">
                 <?php foreach ($existingImages as $img): ?>
                   <div class="existing-thumb" data-path="<?= esc($img) ?>" style="width:120px; height:120px; border-radius:8px; overflow:hidden; border:1px solid #eee; background:#fff; position:relative;">
-                    <img src="<?= base_url('public/' . $img) ?>" alt="<?= esc($dress['title'] ?? 'Current image') ?>" style="width:100%; height:100%; object-fit:cover;">
+                    <img src="<?= base_url('public/' . $img) ?>" alt="<?= esc($dress['title'] ?? 'Current image') ?>" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
                     <button type="button" class="btn-remove-existing" title="Remove" style="position:absolute; top:6px; right:6px; background:rgba(0,0,0,0.6); color:#fff; border:none; width:26px; height:26px; border-radius:50%; cursor:pointer">✕</button>
                   </div>
                 <?php endforeach; ?>

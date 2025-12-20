@@ -166,25 +166,25 @@
         </div>
         <div class="concierge-grid">
           <div class="concierge-item">
-            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('happy-bride-woman-wedding-dress-posing.jpg')) ?>" alt="Personal styling">
+            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('bridal-morning-beautiful-bride-is-dressing-up-wedding-ceremony-wedding-dresses-cm.jpg')) ?>" alt="Personal styling">
             <div class="ci-body">
               <div class="ci-title">Personal styling assistance</div>
             </div>
           </div>
           <div class="concierge-item">
-            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('evening gown.jpg')) ?>" alt="Colour matching">
+            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('rows-of-wedding-dresses-on-display-in-a-specialist-wedding-dress-shop-close-up-of-full-skirts-some-e1636695007545.jpg')) ?>" alt="Colour matching">
             <div class="ci-body">
               <div class="ci-title">Colour matching</div>
             </div>
           </div>
           <div class="concierge-item">
-            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('bride-wedding-dress-with-bouquet-by-window.jpg')) ?>" alt="Accessory pairing">
+            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('accessories.jpg')) ?>" alt="Accessory pairing">
             <div class="ci-body">
               <div class="ci-title">Accessory pairing</div>
             </div>
           </div>
           <div class="concierge-item">
-            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('rows-of-wedding-dresses-on-display-in-a-specialist-wedding-dress-shop-close-up-of-full-skirts-some-e1636695007545.jpg')) ?>" alt="Styling packages">
+            <img class="ci-img" src="<?= base_url('assets/' . rawurlencode('women-enjoying-bachelorette-party.jpg')) ?>" alt="Styling packages">
             <div class="ci-body">
               <div class="ci-title">Occasion-based styling packages</div>
             </div>
@@ -245,7 +245,7 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .ci-img {

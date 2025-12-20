@@ -117,13 +117,7 @@
   </div>
 </section>
 <div class="contact-page contact-container my-5">
-
-  <?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
-  <?php endif; ?>
-  <?php if (session()->getFlashdata('error')): ?>
-    <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
-  <?php endif; ?>
+  <?php $valErrors = session()->getFlashdata('validation_errors') ?: []; ?>
 
   <section class="contact-map-full mb-3 mb-md-5" aria-hidden="false">
     <iframe src="https://www.google.com/maps?q=12+bank+close+Whittlesey+PE7+1UN+Peterborough+United+Kingdom&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Crown &amp; Halo location"></iframe>
@@ -178,6 +172,13 @@
     </div>
 
     <div class="col-md-6">
+      <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+      <?php endif; ?>
+      <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+      <?php endif; ?>
+
       <div class="card shadow-sm p-4">
         <h2 class="h5 mb-3">Contact Form</h2>
         <form action="<?= base_url('/contact/send') ?>" method="post" novalidate>
@@ -186,27 +187,68 @@
             <div class="col-6 mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" class="form-control" id="name" name="name" value="<?= esc(old('name')) ?>" required minlength="2">
+              <?php if (! empty($valErrors['name'])): ?>
+                <div class="text-danger small mt-1"><?= esc($valErrors['name']) ?></div>
+              <?php endif; ?>
             </div>
             <div class="col-6 mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="email" value="<?= esc(old('email')) ?>" required>
+              <?php if (! empty($valErrors['email'])): ?>
+                <div class="text-danger small mt-1"><?= esc($valErrors['email']) ?></div>
+              <?php endif; ?>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="phone" class="form-label">Phone (optional)</label>
+            <label for="phone" class="form-label">Phone</label>
             <input type="tel" class="form-control" id="phone" name="phone" value="<?= esc(old('phone')) ?>">
+            <?php if (! empty($valErrors['phone'])): ?>
+              <div class="text-danger small mt-1"><?= esc($valErrors['phone']) ?></div>
+            <?php endif; ?>
           </div>
 
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control" id="message" name="message" rows="6" required minlength="10"><?= esc(old('message')) ?></textarea>
+            <?php if (! empty($valErrors['message'])): ?>
+              <div class="text-danger small mt-1"><?= esc($valErrors['message']) ?></div>
+            <?php endif; ?>
           </div>
 
           <div class="d-grid">
             <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
           </div>
         </form>
+        <!-- Disable sending emails in environments without mail configured? The controller logs failures. -->
+        <script>
+          (function() {
+            var form = document.querySelector('form[action="<?= base_url('/contact/send') ?>"]');
+            if (!form) return;
+            var btn = form.querySelector('button[type="submit"]');
+            form.addEventListener('submit', function(e) {
+              if (!btn) return;
+              btn.disabled = true;
+              btn.dataset.orig = btn.innerHTML;
+              btn.innerHTML = 'Sending...';
+            });
+          })();
+
+          setTimeout(() => {
+            const alerts = document.querySelectorAll('.alert');
+            if (typeof $ !== 'undefined') {
+              // jQuery available: fade out alerts
+              $(alerts).fadeOut(400);
+            } else {
+              // Vanilla JS fallback
+              alerts.forEach(a => {
+                a.style.transition = 'opacity 0.4s';
+                a.style.opacity = '0';
+                setTimeout(() => { a.style.display = 'none'; }, 400);
+              });
+            }
+          }, 2000);
+        </script>
       </div>
     </div>
   </div>

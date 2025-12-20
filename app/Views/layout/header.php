@@ -1265,7 +1265,7 @@ $isHome = (function_exists('current_url') ? rtrim(current_url(), '/') === rtrim(
         <a class="navbar-brand d-flex align-items-center" href="<?= base_url('/') ?>">
           <img src="<?= !empty($isHome) ? base_url('assets/logo.png') : base_url('assets/logo.png') ?>" alt="Crown & Halo" height="44" onerror="this.style.display='none'">
         </a>
-        <div style="font-weight:500; color:var(--heading);"><?= esc($admin_page_title) ?></div>
+        <!-- <div style="font-weight:500; color:var(--heading);"><?= esc($admin_page_title) ?></div> -->
       </div>
     </nav>
   <?php else: ?>

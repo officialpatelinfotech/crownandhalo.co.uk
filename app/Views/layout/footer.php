@@ -8,7 +8,7 @@
         <a href="<?= base_url('/') ?>" id="footer-brand" class="footer-brand brand-serif">Crown & Halo</a>
         <p>Dress hire for life’s unforgettable moments. Couture pieces, luxury gowns, and personalised styling so you can wear your story.</p>
         <nav class="social" aria-label="Social media">
-          <a href="" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/chdresshire" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
           <a href="https://www.facebook.com/share/1AKQh1jPCf/?mibextid=wwXIfr" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
         </nav>
       </section>
@@ -40,7 +40,7 @@
       </section>
     </div>
     <div class="footer-bottom">
-      <small>&copy; <?= date('Y') ?> Crown & Halo. All rights reserved.</small>
+      <small>&copy; <?= date('Y') ?> Crown & Halo. All rights reserved. Powered by <a href="https://collabrum.co.uk/" style="text-decoration: none;">Collabrum</a></small>
     </div>
   </div>
 </footer>
@@ -97,6 +97,45 @@
     }
   }
 </style>
+</style>
+<script>
+  (function () {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const dataSrc = img.getAttribute('data-src');
+            const dataSrcset = img.getAttribute('data-srcset');
+            if (dataSrc) img.src = dataSrc;
+            if (dataSrcset) img.srcset = dataSrcset;
+            img.classList.remove('lazy');
+            img.removeAttribute('data-src');
+            img.removeAttribute('data-srcset');
+            observer.unobserve(img);
+          }
+        });
+      }, {rootMargin: '200px 0px'});
+
+      document.querySelectorAll('img.lazy').forEach(img => {
+        // Ensure native lazy attribute is present as a fallback
+        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+        io.observe(img);
+      });
+    } else {
+      // Fallback: load all lazy images immediately
+      document.querySelectorAll('img.lazy').forEach(img => {
+        const dataSrc = img.getAttribute('data-src');
+        const dataSrcset = img.getAttribute('data-srcset');
+        if (dataSrc) img.src = dataSrc;
+        if (dataSrcset) img.srcset = dataSrcset;
+        img.classList.remove('lazy');
+        img.removeAttribute('data-src');
+        img.removeAttribute('data-srcset');
+      });
+    }
+  })();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 

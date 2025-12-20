@@ -21,6 +21,10 @@
     transform: translateZ(0);
   }
 
+  .mission-text {
+    padding: 32px 40px;
+  }
+
   .page-hero::before {
     content: '';
     position: absolute;
@@ -65,6 +69,10 @@
     .page-hero__inner .lead {
       font-size: 15px;
     }
+
+    .mission-text {
+      padding: 20px;
+    }
   }
 
   /* existing about styles */
@@ -79,10 +87,10 @@
     margin: 48px auto;
     background: #fbf8f6;
     padding: 0;
-    box-shadow: 0 18px 40px rgba(16,24,40,0.06);
-    border-radius: 6px;
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.06);
+    /* border-radius: 6px; */
     overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
   }
 
@@ -101,26 +109,26 @@
   }
 
   .mission-list {
-    list-style: none;
+    list-style-type: disc;
     padding: 0;
     margin: 12px 0 0 0;
   }
 
   .mission-list li {
     position: relative;
-    padding-left: 28px;
+    margin-left: 28px;
     margin-bottom: 0.9rem;
     color: #6b6360;
   }
 
-  .mission-list li::before {
+  /* .mission-list li::before {
     content: '\25CB';
     position: absolute;
     left: 0;
     top: 2px;
     color: #c9bfb6;
     font-size: 14px;
-  }
+  } */
 
   .mission-visual {
     align-self: stretch;
@@ -151,14 +159,14 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.14));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
     pointer-events: none;
   }
 
   .mission-quote {
     margin: 18px 0 0 0;
     padding-left: 18px;
-    border-left: 3px solid rgba(140,123,110,0.16);
+    border-left: 3px solid rgba(140, 123, 110, 0.16);
     font-style: italic;
     color: #8c7b6e;
     font-size: 20px;
@@ -166,11 +174,26 @@
   }
 
   @media (max-width: 991px) {
-    .mission-panel { padding: 28px 18px; }
-    .mission-inner { grid-template-columns: 1fr; }
-    .mission-visual { order: 2; }
-    .mission-visual .mission-image img { height: 300px; object-position: center top; }
-    .mission-quote { margin-top: 14px; }
+    .mission-panel {
+      padding: 28px 18px;
+    }
+
+    .mission-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .mission-visual {
+      order: 2;
+    }
+
+    .mission-visual .mission-image img {
+      height: 350px;
+      object-position: center top;
+    }
+
+    .mission-quote {
+      margin-top: 14px;
+    }
   }
 
   /* New Chapter angled split with mosaic visual */
@@ -188,7 +211,7 @@
     right: 0;
     top: -32px;
     height: 120px;
-    background: linear-gradient(90deg, rgba(140,123,110,0.06), rgba(140,123,110,0.02));
+    background: linear-gradient(90deg, rgba(140, 123, 110, 0.06), rgba(140, 123, 110, 0.02));
     transform: skewY(-3deg);
     transform-origin: top left;
     z-index: 0;
@@ -210,29 +233,84 @@
   .nc-text {
     background: #fff;
     padding: 34px 36px;
-    box-shadow: 0 16px 36px rgba(16,24,40,0.04);
-    border-radius: 6px;
+    box-shadow: 0 16px 36px rgba(16, 24, 40, 0.04);
+    /* border-radius: 6px; */
   }
 
-  .nc-text h3 { margin-bottom: 12px; color:#8c7b6e; }
+  .nc-text h3 {
+    margin-bottom: 12px;
+    color: #8c7b6e;
+  }
 
-  .nc-visual { display:flex; flex-direction:column; gap:18px; }
+  .nc-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
 
-  .nc-mosaic { display:grid; grid-template-columns: 1fr 1fr; gap:12px; height:240px; }
-  .nc-mosaic .m-item { overflow:hidden; border-radius:6px; }
-  .nc-mosaic .m-large { grid-column: 1 / span 1; grid-row: 1 / span 2; }
-  .nc-mosaic .m-small { height:120px; }
-  .nc-mosaic img { width:100%; height:100%; object-fit:cover; display:block; }
+  .nc-mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    height: 240px;
+  }
 
-  .nc-cta { display:flex; justify-content:flex-end; }
-  .nc-cta .btn-cta { background:#8c7b6e; color:#fff; padding:10px 18px; text-decoration:none; border-radius:4px; }
+  .nc-mosaic .m-item {
+    overflow: hidden;
+    /* border-radius: 6px; */
+  }
+
+  .nc-mosaic .m-large {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .nc-mosaic .m-small {
+    height: 120px;
+  }
+
+  .nc-mosaic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .nc-cta {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nc-cta .btn-cta {
+    background: #8c7b6e;
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    /* border-radius: 4px; */
+  }
 
   @media (max-width: 991px) {
-    .new-chapter-inner { grid-template-columns: 1fr; padding: 18px; }
-    .nc-mosaic { height:180px; grid-template-columns: 1fr 1fr; }
-    .nc-cta { justify-content:center; }
-    .nc-text { order:1 }
-    .nc-visual { order:2 }
+    .new-chapter-inner {
+      grid-template-columns: 1fr;
+      padding: 18px;
+    }
+
+    .nc-mosaic {
+      height: 180px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .nc-cta {
+      justify-content: center;
+    }
+
+    .nc-text {
+      order: 1
+    }
+
+    .nc-visual {
+      order: 2
+    }
   }
 
   .about-content p {
@@ -277,7 +355,7 @@
   .about-hero-image {
     max-width: 880px;
     margin: 18px auto 6px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
   }
@@ -355,7 +433,7 @@
     padding: 48px 64px;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 18px 40px rgba(16, 24, 40, 0.12);
-    /* border-radius: 2px; */
+    border-radius: 2px;
     text-align: left;
   }
 
@@ -392,7 +470,7 @@
     background: #8c7b6e;
     color: #fff;
     padding: 14px 30px;
-    /* border-radius: 2px; */
+    border-radius: 2px;
     text-decoration: none;
     box-shadow: 0 10px 30px rgba(12, 10, 8, 0.25);
     font-size: 16px;
@@ -451,7 +529,7 @@
 
   .tri-img-wrap {
     overflow: hidden;
-    /* border-radius: 6px; */
+    border-radius: 6px;
     box-shadow: 0 18px 36px rgba(16, 24, 40, 0.06);
   }
 
@@ -473,7 +551,7 @@
   .center-box {
     background: #fbf8f6;
     padding: 46px 40px;
-    /* border-radius: 4px; */
+    border-radius: 4px;
     text-align: center;
     box-shadow: 0 18px 40px rgba(16, 24, 40, 0.04);
   }
@@ -544,7 +622,7 @@
   }
 
   .feature-left h2 {
-    font-size: 44px;
+    font-size: 2rem;
     margin: 0 0 12px;
     color: #8c7b6e;
     letter-spacing: 1px;
@@ -594,7 +672,7 @@
 
   .images-row .img-col {
     overflow: hidden;
-    /* border-radius: 6px; */
+    border-radius: 6px;
     position: relative;
   }
 
@@ -722,18 +800,19 @@
   <div class="tri-inner">
     <div class="tri-col side">
       <div class="tri-img-wrap img-large">
-        <img src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" alt="Bridal portrait">
+        <img src="<?= base_url('assets/attractive-bride-is-standing-front-wooden-entrance-stone-building-with-colorful-leaves-ivy-sunny-day.jpg') ?>" alt="Bridal portrait" loading="lazy">
       </div>
 
       <div class="tri-img-wrap img-small">
-        <img src="<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>" alt="Bride by window">
+        <img src="<?= base_url('assets/bride-venice.jpg') ?>" alt="Bride by window" loading="lazy">
       </div>
     </div>
 
     <div class="tri-col center">
       <div class="center-box">
-        <h2 class="brand-serif">HOW<br>Clare Heaffey</h2>
-        <div class="founder"><small>Crown and Halo Founder</small></div>
+        <p class="lead-small">HOW</p>
+        <h2 class="brand-serif m-0">Clare Heaffey</h2>
+        <div class="founder"><em><small>Crown and Halo Founder</small></em></div>
         <div class="divider" style="height:1px; width:48px;background:#e6dfda;margin:14px auto 18px;"></div>
         <p class="lead-small">Turned Her Own Bridal Challenge Into a Gift for Every Woman</p>
       </div>
@@ -741,11 +820,11 @@
 
     <div class="tri-col side">
       <div class="tri-img-wrap img-small">
-        <img src="<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>" alt="Bridesmaids">
+        <img src="<?= base_url('assets/lady-evening-dress-elegant-woman-long-gown (1).jpg') ?>" alt="Bridesmaids" loading="lazy">
       </div>
 
       <div class="tri-img-wrap img-large">
-        <img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Luxury bride">
+        <img src="<?= base_url('assets/beautiful-woman-fancy-dress-walking-down-street-fashion-beauty-makeup-evening-dress-smiling-girl-posing-model-luxury-wearing-accessories-blonde-volume-hair-lipstick-eyes-perfect.jpg') ?>" alt="Luxury bride" loading="lazy">
       </div>
     </div>
   </div>
@@ -756,7 +835,7 @@
     <div class="parallax-panel">
       <p class="mt-4"><b>Crown &amp; Halo was born from the heart of its founder, Clare Heaffey — a woman who understands that love has no age, no timeline, and no rules. At 60 years old, while preparing for her second wedding, Clare expected to find a dress that felt elegant, magical, and true to her story. Instead, she faced something many brides know too well</b></p>
 
-      <ul class="feature-sub" style="list-style-type: circle;">
+      <ul class="feature-sub" style="list-style-type: disc;">
         <li>Overpriced gowns</li>
         <li>Limited choices</li>
         <li>Designs that didn’t reflect her style or confidence</li>
@@ -779,16 +858,16 @@
 
       <p>This moment became the spark that later grew into Crown &amp; Halo Dress Hire — a place where every bride, regardless of age, size, or budget, can feel extraordinary.</p>
 
-      <blockquote style="border-left:4px solid var(--accent); padding:12px 16px; background:#FBF8F6;">
+      <blockquote style="display: inline-block; padding:12px 16px; background: var(--heading); color: white;">
         “Every wedding is a fairytale — every bride deserves to feel like she belongs in hers.” — Clare
       </blockquote>
     </div>
   </div>
 
-  <div class="feature-inner">
+  <!-- <div class="feature-inner">
     <div class="images-row">
       <div class="img-col left">
-        <img src="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" alt="Dress left">
+        <img src="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" alt="Dress left" loading="lazy">
         <div class="img-overlay">
           <div style="border-top:1px solid rgba(255,255,255,0.5);padding-top:18px;">
             <h4>ATTENTION TO DETAIL</h4>
@@ -797,27 +876,27 @@
       </div>
 
       <div class="img-col center">
-        <img src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" alt="Dress center">
+        <img src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" alt="Dress center" loading="lazy">
         <a style="text-decoration: none;" href="<?= base_url("/book-appointment") ?>">
           <div class="img-caption" style="text-transform: uppercase;">Book Now →</div>
         </a>
       </div>
 
       <div class="img-col right">
-        <img src="<?= base_url('assets/evening gown.jpg') ?>" alt="Dress right">
+        <img src="<?= base_url('assets/evening gown.jpg') ?>" alt="Dress right" loading="lazy">
         <a style="text-decoration: none;" href="<?= base_url("/book-appointment") ?>">
           <div class="img-caption" style="text-transform: uppercase;">Book Now →</div>
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <section class="parallax-section parallax-top" aria-hidden="false" style="background-image: url('<?= base_url('assets/young-beautiful-bride-woman-long-white-wedding-dress-whit.jpg') ?>')">
   <div class="parallax-inner">
     <div class="parallax-panel">
       <p><b>Driven by this belief, Clare set out to create a luxury-yet-affordable alternative to bridal shopping. Her vision was simple:</b></p>
-      <ul class="feature-sub" style="list-style-type: circle;">
+      <ul class="feature-sub" style="list-style-type: disc;">
         <li>Designer-inspired gowns without designer price tags</li>
         <li>A sustainable approach to bridal fashion</li>
         <li>Beautiful, high-quality dresses available to every woman</li>
@@ -831,57 +910,57 @@
 </section>
 
 <section class="mission-panel">
-    <div class="mission-text" style="padding:32px 40px;">
-      <h3 class="brand-serif mt-4">Transforming Dreams Into Moments That Last a Lifetime</h3>
-      <p class="feature-sub">Crown &amp; Halo is Clare’s gift to today’s brides — especially those navigating rising costs, financial challenges, and a fashion world that often forgets real people and real budgets.</p>
+  <div class="mission-text">
+    <h3 class="brand-serif mt-4">Transforming Dreams Into Moments That Last a Lifetime</h3>
+    <p class="feature-sub">Crown &amp; Halo is Clare’s gift to today’s brides — especially those navigating rising costs, financial challenges, and a fashion world that often forgets real people and real budgets.</p>
 
-      <p class="mb-0"><b>Her mission is to:</b></p>
-      <ul class="feature-sub mission-list">
-        <li>Make sustainable bridal wear more accessible</li>
-        <li>Offer gown hire options that feel luxurious and special</li>
-        <li>Give women the power to choose elegance without overspending</li>
-        <li>Help brides create unforgettable memories, wrapped in confidence, joy, and beauty</li>
-      </ul>
+    <p class="mb-0"><b>Her mission is to:</b></p>
+    <ul class="feature-sub mission-list">
+      <li>Make sustainable bridal wear more accessible</li>
+      <li>Offer gown hire options that feel luxurious and special</li>
+      <li>Give women the power to choose elegance without overspending</li>
+      <li>Help brides create unforgettable memories, wrapped in confidence, joy, and beauty</li>
+    </ul>
 
-      <p class="feature-sub mt-3">Because every bride — whether she is 25, 35, 45, 60 or beyond — deserves that moment when she looks in the mirror and feels:</p>
-      <div class="mission-quote">“This is my story. This is my fairytale.”</div>
+    <p class="feature-sub mt-3">Because every bride — whether she is 25, 35, 45, 60 or beyond — deserves that moment when she looks in the mirror and feels:</p>
+    <div class="mission-quote">“This is my story. This is my fairytale.”</div>
+  </div>
+  </div>
+
+  <aside class="mission-visual">
+    <div class="mission-image">
+      <img src="<?= base_url('assets/happy-bride-woman-wedding-dress-posing.jpg') ?>" alt="Clare — founder" loading="lazy" />
     </div>
-    </div>
-
-    <aside class="mission-visual">
-      <div class="mission-image">
-        <img src="<?= base_url('assets/happy-bride-woman-wedding-dress-posing.jpg') ?>" alt="Clare — founder" />
-      </div>
-    </aside>
+  </aside>
   </div>
 </section>
 
-        <section class="new-chapter-section" aria-labelledby="new-chapter-heading">
-          <div class="new-chapter-inner">
-            <div class="nc-text">
-              <h3 id="new-chapter-heading" class="brand-serif mt-4">A New Chapter For Brides Everywhere</h3>
-              <p>Crown &amp; Halo is now one of Peterborough’s most exciting options for affordable wedding dress hire, evening gown hire, and designer-inspired occasion wear — all thanks to one woman who dared to ask:</p>
+<section class="new-chapter-section" aria-labelledby="new-chapter-heading">
+  <div class="new-chapter-inner">
+    <div class="nc-text">
+      <h3 id="new-chapter-heading" class="brand-serif mt-4">A New Chapter For Brides Everywhere</h3>
+      <p>Crown &amp; Halo is now one of Peterborough’s most exciting options for affordable wedding dress hire, evening gown hire, and designer-inspired occasion wear — all thanks to one woman who dared to ask:</p>
 
-              <p class="feature-sub nc-quote"><em>“What if beautiful didn’t have to be expensive?”</em></p>
+      <p class="feature-sub nc-quote"><em>“What if beautiful didn’t have to be expensive?”</em></p>
 
-              <p>Clare found the answer. And now she shares it with every bride who walks through our doors.</p>
-            </div>
+      <p>Clare found the answer. And now she shares it with every bride who walks through our doors.</p>
+    </div>
 
-            <div class="nc-visual" aria-hidden="false">
-              <div class="nc-mosaic">
-                <div class="m-item m-large">
-                  <img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Luxury bride">
-                </div>
-                <div class="m-item m-small m-top">
-                  <img src="<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>" alt="Bride by window">
-                </div>
-                <div class="m-item m-small m-bottom">
-                  <img src="<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>" alt="Bridesmaids">
-                </div>
-              </div>
-              <div class="nc-cta">
-                <a class="btn-cta" href="<?= base_url('/book-appointment') ?>">Book an Appointment</a>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="nc-visual" aria-hidden="false">
+      <div class="nc-mosaic">
+        <div class="m-item m-large">
+          <img src="<?= base_url('assets/lady-evening-dress-elegant-woman-long-gown.jpg') ?>" alt="Luxury bride" loading="lazy">
+        </div>
+        <div class="m-item m-small m-top">
+          <img src="<?= base_url('assets/young-women-enjoying-bachelorette.jpg') ?>" alt="Bride by window" loading="lazy">
+        </div>
+        <div class="m-item m-small m-bottom">
+          <img src="<?= base_url('assets/young-women-enjoying-bachelorette-party.jpg') ?>" alt="Bridesmaids" loading="lazy">
+        </div>
+      </div>
+      <div class="nc-cta">
+        <a class="btn-cta" href="<?= base_url('/book-appointment') ?>">Book an Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>

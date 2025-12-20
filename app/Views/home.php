@@ -1284,7 +1284,7 @@
   <div class="page-banner" role="region" aria-label="Homepage banner" style="--banner-bg: url('<?= base_url('assets/3.png') ?>');">
     <div class="banner-inner">
       <div class="hero-top">
-        <img src="<?= base_url('assets/logo-2x2.png') ?>" alt="Crown & Halo logo" class="banner-logo-top">
+        <img src="<?= base_url('assets/logo-2x2.png') ?>" alt="Crown & Halo logo" class="banner-logo-top" loading="lazy">
         <h1 class="hero-title brand-serif">Luxury Dress Hire in <br>Peterborough</h1>
       </div>
       <div class="banner-cta" style="margin-top:18px;">
@@ -1315,7 +1315,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+          <div class="image" style="background-image: url('<?= base_url('assets/IMG_4981.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
             <h3>Sustainable Fashion</h3>
           </div>
@@ -1372,7 +1372,7 @@
         </div>
 
         <div class="img-frame" aria-hidden="true">
-          <img class="lazy" data-src="<?= base_url('assets/evening gown.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Why Choose Crown & Halo" decoding="async" fetchpriority="low">
+          <img class="lazy" data-src="<?= base_url('assets/IMG_4991.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Why Choose Crown & Halo" decoding="async" fetchpriority="low">
         </div>
       </div>
     </div>
@@ -1588,15 +1588,15 @@
 
   <div class="collections-inner">
     <div id="showcaseDisplay" class="showcase-display" role="img" aria-label="Collections showcase image">
-      <div id="showcaseBase" class="showcase-base" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');" aria-hidden="true"></div>
+      <div id="showcaseBase" class="showcase-base" style="background-image: url('<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>');" aria-hidden="true"></div>
       <div id="showcaseOverlay" class="showcase-overlay" aria-hidden="true"></div>
     </div>
 
     <div class="showcase-cols" role="tablist" aria-label="Collections">
-      <a role="tab" class="showcase-col" href="<?= base_url('/collections/happily-ever-after') ?>" data-image="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" data-scale="1.08">Wedding Gowns</a>
-      <a role="tab" class="showcase-col" href="<?= base_url('/collections/enchanted-twilight') ?>" data-image="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" data-scale="1.06">Evening Gowns</a>
-      <a role="tab" class="showcase-col" href="<?= base_url('/collections/princess-prom-dreams') ?>" data-image="<?= base_url('assets/evening gown.jpg') ?>" data-scale="1.03">Prom Dresses</a>
-      <a role="tab" class="showcase-col" href="<?= base_url('/collections/crown-halo-couture') ?>" data-image="<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>" data-scale="1.04">Luxury Designer Wear</a>
+      <a role="tab" class="showcase-col" data-image="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" data-scale="1.08">Wedding Gowns</a>
+      <a role="tab" class="showcase-col" data-image="<?= base_url('assets/luxury.jpg') ?>" data-scale="1.04">Luxury Designer Wear</a>
+      <a role="tab" class="showcase-col" data-image="<?= base_url('assets/prom.jpg') ?>" data-scale="1.03">Prom Dresses</a>
+      <a role="tab" class="showcase-col" data-image="<?= base_url('assets/evening gown.jpg') ?>" data-scale="1.06">Evening Gowns</a>
     </div>
   </div>
 
@@ -1688,7 +1688,7 @@
   </script>
 </section>
 
-<section id="how-it-works" class="parallax" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');">
+<section id="how-it-works" class="parallax" style="background-image: url('<?= base_url('assets/luxury-dress.jpg') ?>');">
   <div class="hero-inner">
     <div class="how-panel mx-3 mx-md-0">
       <h2 class="brand-serif" style="color:var(--heading);">Choose the Smarter, More Sustainable Way to Shine</h2>
@@ -1731,7 +1731,7 @@
       .our-project .feature-card .image {
         height: 220px;
         background-position: center center;
-        transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease;
+        transition: transform 260ms cubic-bezier(.2, .9, .2, 1), box-shadow 260ms ease;
         will-change: transform;
         transform-origin: center center;
       }
@@ -1791,47 +1791,47 @@
     <div class="project-cols" aria-hidden="false">
       <div class="col col-left">
         <div class="feature-card tall">
-          <div class="image" style="background-image: url('<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>');" aria-hidden="true"></div>
+          <div class="image" style="background-image: url('<?= base_url('assets/IMG_4957.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
             <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
           </div>
         </div>
 
-        <div class="feature-card medium">
-          <div class="image" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');" aria-hidden="true"></div>
+        <div class="feature-card small">
+          <div class="image" style="background-image: url('<?= base_url('assets/prom dress 2.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
-            <h3 class="brand-serif" style="text-transform: uppercase;">Luxury Designer Wear</h3>
+            <h3 class="brand-serif" style="text-transform: uppercase;">Prom Dress</h3>
           </div>
         </div>
       </div>
 
       <div class="col col-center">
-        <div class="feature-card small">
-          <div class="image" style="background-image: url('<?= base_url('assets/3.png') ?>');" aria-hidden="true"></div>
+        <div class="feature-card medium">
+          <div class="image" style="background-image: url('<?= base_url('assets/luxury 1.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
-            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
+            <h3 class="brand-serif" style="text-transform: uppercase;">Luxury Designer Wear</h3>
           </div>
         </div>
 
-        <div class="feature-card medium">
-          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+        <div class="feature-card small">
+          <div class="image" style="background-image: url('<?= base_url('assets/beautiful-bridesmaids-pretty-dresses-outdoors.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
-            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
+            <h3 class="brand-serif" style="text-transform: uppercase;">Bridesmaids Dress</h3>
+            <p class="feature-sub"></p>
           </div>
         </div>
       </div>
 
       <div class="col col-right">
         <div class="feature-card tall">
-          <div class="image" style="background-image: url('<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>');" aria-hidden="true"></div>
+          <div class="image" style="background-image: url('<?= base_url('assets/romantic-wedding-couple-love-walks-mountains-forest.jpg') ?>');" aria-hidden="true"></div>
           <div class="info">
-            <h3 class="brand-serif" style="text-transform: uppercase;">Luxury Designer Wear</h3>
-            <p class="feature-sub"></p>
+            <h3 class="brand-serif" style="text-transform: uppercase;">Wedding Dress</h3>
           </div>
         </div>
 
         <div class="feature-card small">
-          <div class="image" style="background-image: url('<?= base_url('assets/bride-bridesmaids-with-wedding-bouquets-sunny-wedding-reception-joyful-moment.jpg') ?>');" aria-hidden="true"></div>
+          <div class="image" style="background-image: url('<?= base_url('assets/evening gowns 3.jpg') ?>'); background-position: left -50px; background-repeat: no-repeat;" aria-hidden="true"></div>
           <div class="info">
             <h3 class="brand-serif" style="text-transform: uppercase;">Evening Dresses</h3>
           </div>
@@ -1858,7 +1858,7 @@
         </ul>
       </div>
       <div class="img-frame">
-        <img class="lazy" data-src="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Sustainable and affordable luxury" decoding="async" fetchpriority="low">
+        <img class="lazy" data-src="<?= base_url('assets/editorial-enchanted-realm.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Sustainable and affordable luxury" decoding="async" fetchpriority="low">
       </div>
     </div>
 
@@ -1873,7 +1873,7 @@
     </div>
     <div class="split-reverse" style="margin-top:26px;">
       <div class="img-frame">
-        <img class="lazy" data-src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Confident without commitment" decoding="async" fetchpriority="low">
+        <img class="lazy" data-src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Confident without commitment" decoding="async" fetchpriority="low" style="object-position: center -65px !important;">
       </div>
       <div>
         <h3 class="brand-serif" style="color:var(--heading);">Luxury Bridal Fashion Without the Luxury Price Tag</h3>

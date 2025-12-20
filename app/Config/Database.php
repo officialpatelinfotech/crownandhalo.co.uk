@@ -24,8 +24,7 @@ class Database extends Config
    *
    * @var array<string, mixed>
    */
-  public array $default = [
-    'DSN'          => '',
+  public array $default = [ 'DSN'          => '',
     'hostname'     => 'localhost',
     'username'     => 'root',
     'password'     => '',
@@ -41,7 +40,7 @@ class Database extends Config
     'compress'     => false,
     'strictOn'     => false,
     'failover'     => [],
-    'port'         => 8889,
+    'port'         => 3306,
     'numberNative' => false,
     'foundRows'    => false,
     'dateFormat'   => [

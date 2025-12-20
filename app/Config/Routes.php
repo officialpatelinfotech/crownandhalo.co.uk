@@ -39,3 +39,4 @@ $routes->post('/admin/dresses/store', 'Admin::store');
 $routes->get('/admin/dresses/edit/(:num)', 'Admin::edit/$1');
 $routes->post('/admin/dresses/update/(:num)', 'Admin::update/$1');
 $routes->get('/admin/dresses/delete/(:num)', 'Admin::delete/$1');
+$routes->get('/admin/contacts', 'Admin::contacts');

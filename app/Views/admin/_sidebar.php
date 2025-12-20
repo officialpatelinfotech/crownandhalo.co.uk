@@ -20,6 +20,7 @@
     <a class="nav-link <?= $is_active(base_url('/admin'), true) ?>" href="<?= base_url('/admin') ?>">Dashboard</a>
     <a class="nav-link <?= $is_active(base_url('/admin/dresses')) ?>" href="<?= base_url('/admin/dresses') ?>">Dresses</a>
     <a class="nav-link <?= $is_active(base_url('/admin/dresses/create'), true) ?>" href="<?= base_url('/admin/dresses/create') ?>">Add Dress</a>
+    <a class="nav-link <?= $is_active(base_url('/admin/contacts')) ?>" href="<?= base_url('/admin/contacts') ?>">Contacts</a>
     <a class="nav-link" href="<?= base_url('/') ?>" target="_blank">View Site</a>
     <a class="nav-link text-danger" href="<?= base_url('/admin/logout') ?>">Logout</a>
   </nav>

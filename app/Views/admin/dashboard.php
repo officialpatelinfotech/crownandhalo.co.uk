@@ -1,4 +1,11 @@
-<div class="container-fluid mt-3">
+<style>
+	.container {
+		width: 1200px !important;
+		max-width: 1200px !important;
+		margin: 0 auto;
+	}
+</style>
+<div class="container mt-3">
 	<div class="row">
 		<div class="col-md-2">
 			<?= view('admin/_sidebar') ?>
@@ -32,8 +39,8 @@
 									<?php foreach ($recentDresses as $d): ?>
 										<div style="width:160px; border-radius:8px; overflow:hidden; border:1px solid #eee; background:#fff;">
 											<?php $img = ! empty($d['image']) ? $d['image'] : null; ?>
-											<?php if ($img): ?>
-												<img src="<?= base_url('public/' . $img) ?>" style="width:100%; height:110px; object-fit:cover; display:block">
+												<?php if ($img): ?>
+												<img src="<?= base_url('public/' . $img) ?>" loading="lazy" style="width:100%; height:110px; object-fit:cover; display:block">
 											<?php else: ?>
 												<div style="width:100%; height:110px; background:#F5F2EF"></div>
 											<?php endif; ?>

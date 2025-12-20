@@ -34,7 +34,8 @@ class PageController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('error', 'Please correct the form and try again.');
+            $errors = $this->validator ? $this->validator->getErrors() : [];
+            return redirect()->back()->withInput()->with('error', 'Please correct the form and try again.')->with('validation_errors', $errors);
         }
 
         $formData = [
@@ -44,24 +45,52 @@ class PageController extends BaseController
             'message' => $this->request->getPost('message'),
         ];
 
-        $email = \Config\Services::email();
-
-        // Target recipient (site owner) from env or fallback
-        $to = $_ENV['SITE_OWNER_EMAIL'] ?? getenv('SITE_OWNER_EMAIL') ?? 'owner@example.com';
-
-        $email->setTo($to);
-        // Use the visitor's email as reply-to
-        $email->setFrom($_ENV['FROM_EMAIL'] ?? getenv('FROM_EMAIL') ?? 'no-reply@example.com', 'Website Contact');
-        $email->setReplyTo($formData['email'], $formData['name']);
-        $email->setSubject('New Contact Message from ' . $formData['name']);
-        $email->setMessage(view('email/contact_email_template', $formData));
-
-        if ($email->send()) {
-            return redirect()->to('/contact')->with('success', 'Thanks! Your message has been sent.');
+        // Save to database
+        try {
+            $contactModel = new \App\Models\ContactModel();
+            $contactModel->insert($formData);
+        } catch (\Exception $e) {
+            log_message('error', 'Contact save failed: ' . $e->getMessage());
+            return redirect()->back()->withInput()->with('error', 'Could not save your message. Please try again.');
         }
 
-        $debug = $email->printDebugger(['headers']);
-        return redirect()->back()->withInput()->with('error', 'Could not send email. ' . $debug);
+        $email = \Config\Services::email();
+
+        // Target recipient (site owner) from env or fallback - make sure it's a non-empty string
+        $rawTo = $_ENV['SITE_OWNER_EMAIL'] ?? getenv('SITE_OWNER_EMAIL') ?? '';
+        $to = is_string($rawTo) ? trim($rawTo) : '';
+        if (empty($to)) {
+            $to = 'owner@example.com';
+        }
+
+        // Send notification to site owner
+        try {
+            // Defensive: only call setTo if we have a string
+            $email->setTo("chdresshire@gmail.com");
+            $email->setFrom($_ENV['FROM_EMAIL'] ?? getenv('FROM_EMAIL') ?? 'no-reply@example.com', 'Website Contact');
+            $email->setReplyTo($formData['email'], $formData['name']);
+            $email->setSubject('New Contact Message from ' . $formData['name']);
+            $email->setMessage(view('email/contact_email_template', $formData));
+            $email->send();
+        } catch (\Exception $e) {
+            log_message('error', 'Contact admin email failed: ' . $e->getMessage());
+        }
+
+        // Send confirmation to visitor (if email provided)
+        if (! empty($formData['email'])) {
+            try {
+                $confirm = \Config\Services::email();
+                $confirm->setTo($formData['email']);
+                $confirm->setFrom($_ENV['FROM_EMAIL'] ?? getenv('FROM_EMAIL') ?? 'no-reply@example.com', 'Crown & Halo');
+                $confirm->setSubject('We received your message');
+                $confirm->setMessage(view('email/contact_confirmation', $formData));
+                $confirm->send();
+            } catch (\Exception $e) {
+                log_message('error', 'Contact confirmation email failed: ' . $e->getMessage());
+            }
+        }
+
+        return redirect()->to('/contact')->with('success', 'Thanks! Your message has been received.');
     }
 
     public function sitemap()

@@ -1,3 +1,10 @@
+<style>
+  .container {
+    width: 520px !important;
+    max-width: 1200px !important;
+    margin: 0 auto;
+  }
+</style>
 <div class="container" style="max-width:520px; margin-top:36px;">
   <div class="card shadow-sm">
     <div class="card-body">
@@ -25,4 +32,5 @@
 
 </main>
 </body>
+
 </html>

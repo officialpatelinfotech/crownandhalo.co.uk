@@ -45,6 +45,15 @@ class Admin extends BaseController
     echo view('admin/dresses_list', $data);
   }
 
+  public function contacts()
+  {
+    if ($resp = $this->ensureAdmin()) return $resp;
+    $contactModel = new \App\Models\ContactModel();
+    $data['contacts'] = $contactModel->orderBy('created_at', 'DESC')->findAll();
+    echo view('layout/header', ['admin_header' => true, 'admin_page_title' => 'Contacts']);
+    echo view('admin/contacts_list', $data);
+  }
+
   public function create()
   {
     if ($resp = $this->ensureAdmin()) return $resp;

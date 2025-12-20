@@ -121,19 +121,19 @@
     <h2 class="brand-serif">The Enchanted Twilight Collection – Evening Gowns</h2>
     <p class="feature-sub">Elegant floor-length gowns perfect for galas, black-tie events, and red-carpet moments.</p>
     <div class="collection-grid">
-      <div class="collection-card"><img src="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" alt="Enchanted Twilight">
+      <div class="collection-card"><img src="<?= base_url('assets/ball-gown-wedding-dress-fitted-bodice-full-skirt.jpg') ?>" alt="Enchanted Twilight" loading="lazy">
         <div class="body">
           <h4>Gilded Midnight</h4>
           <p>Floor-length satin gown with sweeping train.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" alt="Enchanted Twilight">
+      <div class="collection-card"><img src="<?= base_url('assets/front-view-adorable-woman-with-stylish-hairdo-dressed-long-veil-mermaid-wedding-dress-with-long-trail-holding-white-peonies-flowers-smiling-posing-camera-landscape-background.jpg') ?>" alt="Enchanted Twilight" loading="lazy">
         <div class="body">
           <h4>Moonlight Cascade</h4>
           <p>Beaded tulle with delicate illusion neckline.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Enchanted Twilight">
+      <div class="collection-card"><img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Enchanted Twilight" loading="lazy">
         <div class="body">
           <h4>Twilight Velvet</h4>
           <p>Rich velvet gown with sculpted silhouette.</p>
@@ -146,19 +146,19 @@
     <h2 class="brand-serif">Princess Prom Dreams Collection – Prom dresses</h2>
     <p class="feature-sub">Stand out on your big night with luxury prom gowns that make a statement — without the luxury price.</p>
     <div class="collection-grid">
-      <div class="collection-card"><img src="<?= base_url('assets/happy-bride-smile-talking-with-her-friend-smartphone-looking-her-nails.jpg') ?>" alt="Prom">
+      <div class="collection-card"><img src="<?= base_url('assets/happy-bride-smile-talking-with-her-friend-smartphone-looking-her-nails.jpg') ?>" alt="Prom" loading="lazy">
         <div class="body">
           <h4>Rosewater Dream</h4>
           <p>Ballgown with structured bodice and sparkle.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/young-women-enjoying-bachelorette-party.jpg') ?>" alt="Prom">
+      <div class="collection-card"><img src="<?= base_url('assets/young-women-enjoying-bachelorette-party.jpg') ?>" alt="Prom" loading="lazy">
         <div class="body">
           <h4>Starlit A-line</h4>
           <p>Lightweight chiffon with delicate embroidery.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/attractive-bridesmaids-dressed-pale-pink-fashionable-dresses-with-tender-bouquets-made-pink-roses-are-smiling.jpg') ?>" alt="Prom">
+      <div class="collection-card"><img src="<?= base_url('assets/attractive-bridesmaids-dressed-pale-pink-fashionable-dresses-with-tender-bouquets-made-pink-roses-are-smiling.jpg') ?>" alt="Prom" loading="lazy">
         <div class="body">
           <h4>Velvet Empress</h4>
           <p>Statement velvet gown with off-shoulder sleeves.</p>
@@ -171,19 +171,19 @@
     <h2 class="brand-serif">The Happily Ever After Collection – Wedding Gowns</h2>
     <p class="feature-sub">Affordable, elegant bridalwear and bridesmaid dresses designed to look stunning in every photograph.</p>
     <div class="collection-grid">
-      <div class="collection-card"><img src="<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>" alt="Wedding">
+      <div class="collection-card"><img src="<?= base_url('assets/bride-wedding-dress-with-bouquet-by-window.jpg') ?>" alt="Wedding" loading="lazy">
         <div class="body">
           <h4>Ivory Blossom</h4>
           <p>Lace gown with romantic sweetheart neckline.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/rows-of-wedding-dresses-on-display-in-a-specialist-wedding-dress-shop-close-up-of-full-skirts-some-e1636695007545.jpg') ?>" alt="Wedding">
+      <div class="collection-card"><img src="<?= base_url('assets/rows-of-wedding-dresses-on-display-in-a-specialist-wedding-dress-shop-close-up-of-full-skirts-some-e1636695007545.jpg') ?>" alt="Wedding" loading="lazy">
         <div class="body">
           <h4>Seaside Grace</h4>
           <p>Lightweight crepe perfect for coastal ceremonies.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/young-beautiful-bride-woman-long-white-wedding-dress-whit.jpg') ?>" alt="Wedding">
+      <div class="collection-card"><img src="<?= base_url('assets/young-beautiful-bride-woman-long-white-wedding-dress-whit.jpg') ?>" alt="Wedding" loading="lazy">
         <div class="body">
           <h4>Classic Embrace</h4>
           <p>Timeless silhouette with detailed embroidery.</p>
@@ -196,19 +196,19 @@
     <h2 class="brand-serif">Crown &amp; Halo Collection – Luxury Designer Wear</h2>
     <p class="feature-sub">Editorial-inspired, one-of-a-kind pieces ideal for photoshoots, influencers, pageants, and high-end events.</p>
     <div class="collection-grid">
-      <div class="collection-card"><img src="<?= base_url('assets/luxury-dress.jpg') ?>" alt="Couture">
+      <div class="collection-card"><img src="<?= base_url('assets/luxury-dress.jpg') ?>" alt="Couture" loading="lazy">
         <div class="body">
           <h4>Runway Muse</h4>
           <p>Avant-garde silhouette with couture finishes.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Couture">
+      <div class="collection-card"><img src="<?= base_url('assets/luxury-bride-wearing-her-wedding-dress.jpg') ?>" alt="Couture" loading="lazy">
         <div class="body">
           <h4>Opal Statement</h4>
           <p>Hand-embellished gown crafted for editorials.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/luxury gown.jpg') ?>" alt="Couture">
+      <div class="collection-card"><img src="<?= base_url('assets/luxury gown.jpg') ?>" alt="Couture" loading="lazy">
         <div class="body">
           <h4>Sculpted Halo</h4>
           <p>Architectural dress with dramatic lines.</p>
@@ -221,13 +221,13 @@
     <h2 class="brand-serif">Plus-Size Dress Hire</h2>
     <p class="feature-sub">Beautiful silhouettes designed to flatter every curve, available in sizes 6–24+.</p>
     <div class="collection-grid">
-      <div class="collection-card"><img src="<?= base_url('assets/happy-bride-woman-wedding-dress-posing.jpg') ?>" alt="Plus size">
+      <div class="collection-card"><img src="<?= base_url('assets/happy-bride-woman-wedding-dress-posing.jpg') ?>" alt="Plus size" loading="lazy">
         <div class="body">
           <h4>Curve Luxe</h4>
           <p>Supportive structure with elegant drape.</p>
         </div>
       </div>
-      <div class="collection-card"><img src="<?= base_url('assets/attractive-bridesmaids-dressed-pale-pink-fashionable-dresses-with-tender-bouquets-made-pink-roses-are-smiling.jpg') ?>" alt="Plus size">
+      <div class="collection-card"><img src="<?= base_url('assets/attractive-bridesmaids-dressed-pale-pink-fashionable-dresses-with-tender-bouquets-made-pink-roses-are-smiling.jpg') ?>" alt="Plus size" loading="lazy">
         <div class="body">
           <h4>Radiant Silhouette</h4>
           <p>Comfort and glamour for every body.</p>
